@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.hades.ppi.window" name="Hades PPI window" version="1.2.0" provider-name="CB1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Hades player info as a self-contained add-on window</summary>
+    <description lang="en_GB">Shows the Hades player information as a window of this add-on, in place of the Hades pages. It brings its own fonts, textures and strings, so it does not depend on the skin and does not replace Hades files.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <license>GPL-2.0-only; fonts: SIL OFL 1.1</license>
+  </extension>
+</addon>

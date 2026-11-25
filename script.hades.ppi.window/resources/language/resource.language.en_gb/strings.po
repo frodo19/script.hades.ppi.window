@@ -1,0 +1,1705 @@
+# Hades PPI window strings
+msgid ""
+msgstr ""
+"Project-Id-Version: script.hades.ppi.window\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "#30000"
+msgid "Audio decoder"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Video resolution"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Video aspect"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Audio bitrate"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Screen resolution"
+msgstr ""
+
+msgctxt "#30005"
+msgid "System"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Subtitle decoder"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Dolby Vision"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Output"
+msgstr ""
+
+msgctxt "#30009"
+msgid "failed; tried again with a later video"
+msgstr ""
+
+msgctxt "#30010"
+msgid "this TV input has no Dolby Vision Standard"
+msgstr ""
+
+msgctxt "#30011"
+msgid "the video output does not support it"
+msgstr ""
+
+msgctxt "#30012"
+msgid "the TV cannot select the RGB range (NVIDIA)"
+msgstr ""
+
+msgctxt "#30013"
+msgid "the output mode is not 3840x2160 at 24 to 60 Hz"
+msgstr ""
+
+msgctxt "#30014"
+msgid "not available for this video"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Layers"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Profile"
+msgstr ""
+
+msgctxt "#30017"
+msgid "L1 min / avg / max"
+msgstr ""
+
+msgctxt "#30018"
+msgid "L6 MaxCLL / MaxFALL"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Signal"
+msgstr ""
+
+msgctxt "#30020"
+msgid "RGB 8 bits, no dithering (DV 4:2:2 12 bits)"
+msgstr ""
+
+msgctxt "#30021"
+msgid "Display"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Dolby Vision Standard (TV-led)"
+msgstr ""
+
+msgctxt "#30023"
+msgid "DV without the Standard mode"
+msgstr ""
+
+msgctxt "#30024"
+msgid "no Dolby Vision"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Last 10 s"
+msgstr ""
+
+msgctxt "#30026"
+msgid "frames"
+msgstr ""
+
+msgctxt "#30027"
+msgid "failed"
+msgstr ""
+
+msgctxt "#30028"
+msgid "Longest gap"
+msgstr ""
+
+msgctxt "#30029"
+msgid "L1 changes"
+msgstr ""
+
+msgctxt "#30030"
+msgid "Live bitrate"
+msgstr ""
+
+msgctxt "#30031"
+msgid "Video buffer"
+msgstr ""
+
+msgctxt "#30032"
+msgid "Audio buffer"
+msgstr ""
+
+msgctxt "#30033"
+msgid "enhancement layer resynchronizing"
+msgstr ""
+
+msgctxt "#30034"
+msgid "Reason"
+msgstr ""
+
+msgctxt "#30035"
+msgid "DV Standard, HDMI 1.4b signalling"
+msgstr ""
+
+msgctxt "#30036"
+msgid "older DV signalling (HDMI 1.4b), not sent"
+msgstr ""
+
+msgctxt "#30037"
+msgid "the display takes it at 2160p up to 30 Hz only"
+msgstr ""
+
+msgctxt "#30038"
+msgid "Dolby Vision, data not valid"
+msgstr ""
+
+msgctxt "#30039"
+msgid "the TV's Dolby Vision data is not valid"
+msgstr ""
+
+msgctxt "#30040"
+msgid "EDID not readable; tried with the next video"
+msgstr ""
+
+msgctxt "#30041"
+msgid "the view settings (zoom, stretch or shift)"
+msgstr ""
+
+msgctxt "#30042"
+msgid "GPU (10 s)"
+msgstr ""
+
+msgctxt "#30043"
+msgid "Headroom"
+msgstr ""
+
+msgctxt "#30044"
+msgid "direct"
+msgstr ""
+
+msgctxt "#30045"
+msgid "composed"
+msgstr ""
+
+msgctxt "#30046"
+msgid "GPU by pass"
+msgstr ""
+
+msgctxt "#30047"
+msgid "turned off in the settings"
+msgstr ""
+
+msgctxt "#30048"
+msgid "another output was chosen for this video"
+msgstr ""
+
+msgctxt "#30049"
+msgid "with GUI"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Overview"
+msgstr ""
+
+msgctxt "#30051"
+msgid "Video output"
+msgstr ""
+
+msgctxt "#30052"
+msgid "HDR metadata sent"
+msgstr ""
+
+msgctxt "#30053"
+msgid "Processing and system"
+msgstr ""
+
+msgctxt "#30054"
+msgid "Format"
+msgstr ""
+
+msgctxt "#30055"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#30056"
+msgid "Picture"
+msgstr ""
+
+msgctxt "#30057"
+msgid "Aspect ratio"
+msgstr ""
+
+msgctxt "#30058"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#30059"
+msgid "Decoder"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Deinterlacing"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Bitrate"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Channels"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Layout"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Sample format"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Sent as"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Output signal"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Language"
+msgstr ""
+
+msgctxt "#30068"
+msgid "Subtitles"
+msgstr ""
+
+msgctxt "#30069"
+msgid "passthrough"
+msgstr ""
+
+msgctxt "#30070"
+msgid "PCM, decoded"
+msgstr ""
+
+msgctxt "#30071"
+msgid "no audio output"
+msgstr ""
+
+msgctxt "#30072"
+msgid "float"
+msgstr ""
+
+msgctxt "#30073"
+msgid "Mode"
+msgstr ""
+
+msgctxt "#30074"
+msgid "Colorimetry"
+msgstr ""
+
+msgctxt "#30075"
+msgid "default (by the mode)"
+msgstr ""
+
+msgctxt "#30076"
+msgid "Transport"
+msgstr ""
+
+msgctxt "#30077"
+msgid "RGB 8-bit, DV 12-bit 4:2:2"
+msgstr ""
+
+msgctxt "#30078"
+msgid "Framebuffer"
+msgstr ""
+
+msgctxt "#30079"
+msgid "video on a plane of its own"
+msgstr ""
+
+msgctxt "#30080"
+msgid "RGB 16-bit float"
+msgstr ""
+
+msgctxt "#30081"
+msgid "Output depth"
+msgstr ""
+
+msgctxt "#30082"
+msgid "Mastering display"
+msgstr ""
+
+msgctxt "#30083"
+msgid "not given"
+msgstr ""
+
+msgctxt "#30084"
+msgid "FEL residual"
+msgstr ""
+
+msgctxt "#30085"
+msgid "Source display"
+msgstr ""
+
+msgctxt "#30086"
+msgid "L2 trims"
+msgstr ""
+
+msgctxt "#30087"
+msgid "none"
+msgstr ""
+
+msgctxt "#30088"
+msgid "L5 in the RPU"
+msgstr ""
+
+msgctxt "#30089"
+msgid "L5 sent"
+msgstr ""
+
+msgctxt "#30090"
+msgid "L5 sent (made)"
+msgstr ""
+
+msgctxt "#30091"
+msgid "RPU blocks"
+msgstr ""
+
+msgctxt "#30092"
+msgid "Blocks sent"
+msgstr ""
+
+msgctxt "#30093"
+msgid "Not sent"
+msgstr ""
+
+msgctxt "#30094"
+msgid "Drawing without GUI"
+msgstr ""
+
+msgctxt "#30095"
+msgid "Frame ahead"
+msgstr ""
+
+msgctxt "#30096"
+msgid "Fidelity step-down"
+msgstr ""
+
+msgctxt "#30097"
+msgid "Memory"
+msgstr ""
+
+msgctxt "#30098"
+msgid "not known"
+msgstr ""
+
+msgctxt "#30099"
+msgid "This video has no HDR or Dolby Vision metadata."
+msgstr ""
+
+msgctxt "#30100"
+msgid "other"
+msgstr ""
+
+msgctxt "#30101"
+msgid "data"
+msgstr ""
+
+msgctxt "#30102"
+msgid "re-encoded"
+msgstr ""
+
+msgctxt "#30103"
+msgid "No HDR metadata is sent to the display."
+msgstr ""
+
+msgctxt "#30104"
+msgid "Primaries"
+msgstr ""
+
+msgctxt "#30105"
+msgid "FEL resynchronizing"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Video"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Player cache"
+msgstr ""
+
+msgctxt "#30109"
+msgid "none (faithful)"
+msgstr ""
+
+msgctxt "#30110"
+msgid "level"
+msgstr ""
+
+msgctxt "#30111"
+msgid "fixed"
+msgstr ""
+
+msgctxt "#30112"
+msgid "up to"
+msgstr ""
+
+msgctxt "#30113"
+msgid "the driver chooses"
+msgstr ""
+
+msgctxt "#30114"
+msgid "not used for Dolby Vision"
+msgstr ""
+
+msgctxt "#30115"
+msgid "simpler rounding under the GUI"
+msgstr ""
+
+msgctxt "#30116"
+msgid "the SDR base layer could not be composed"
+msgstr ""
+
+msgctxt "#30117"
+msgid "HLG base layer: its RPU declares no PQ picture"
+msgstr ""
+
+msgctxt "#30118"
+msgid "the TV is on a DisplayPort output or converter"
+msgstr ""
+
+msgctxt "#30119"
+msgid "the TV is driven as DVI (no HDMI InfoFrames)"
+msgstr ""
+
+msgctxt "#30120"
+msgid "the HDMI link runs in FRL mode; it needs TMDS"
+msgstr ""
+
+msgctxt "#30121"
+msgid "the link cannot carry this mode in 8-bit RGB"
+msgstr ""
+
+msgctxt "#30122"
+msgid "the graphics driver rejects this TV's DV block"
+msgstr ""
+
+msgctxt "#30123"
+msgid "refused by the driver (see the kernel log)"
+msgstr ""
+
+msgctxt "#30124"
+msgid "this output has no 3840x2160 mode at 24 to 60 Hz"
+msgstr ""
+
+msgctxt "#30125"
+msgid "libplacebo's reshaping"
+msgstr ""
+
+msgctxt "#30126"
+msgid "VAAPI is off in the settings"
+msgstr ""
+
+msgctxt "#30127"
+msgid "VAAPI is off for its codec in the settings"
+msgstr ""
+
+msgctxt "#30128"
+msgid "decoded by the processor (VAAPI could not)"
+msgstr ""
+
+msgctxt "#30129"
+msgid "Low-Latency, mapped by Hades (4:2:2, 12 bits)"
+msgstr ""
+
+msgctxt "#30130"
+msgid "DV Low-Latency only, turned off in the settings"
+msgstr ""
+
+msgctxt "#30131"
+msgid "the output driver cannot send DV Low-Latency"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Signalling"
+msgstr ""
+
+msgctxt "#30133"
+msgid "HDMI 1.4b vendor InfoFrame"
+msgstr ""
+
+msgctxt "#30134"
+msgid "the driver lacks something DV needs (see log)"
+msgstr ""
+
+msgctxt "#30135"
+msgid "this output has no 3840x2160 mode at this rate"
+msgstr ""
+
+msgctxt "#30136"
+msgid "the driver cannot send the HDMI 1.4b signalling"
+msgstr ""
+
+msgctxt "#30137"
+msgid "the refresh rate is fixed outside 24 to 60 Hz"
+msgstr ""
+
+msgctxt "#30138"
+msgid "not decoded"
+msgstr ""
+
+msgctxt "#30139"
+msgid "all the link carries"
+msgstr ""
+
+msgctxt "#30140"
+msgid "8-bit RGB setting"
+msgstr ""
+
+msgctxt "#30141"
+msgid "as the driver says"
+msgstr ""
+
+msgctxt "#30142"
+msgid "Transport"
+msgstr ""
+
+msgctxt "#30143"
+msgid "As composed"
+msgstr ""
+
+msgctxt "#30144"
+msgid "Converted to BT.2020"
+msgstr ""
+
+msgctxt "#30145"
+msgid "fallback for this video"
+msgstr ""
+
+msgctxt "#30146"
+msgid "L5 sent (with the overlays)"
+msgstr ""
+
+msgctxt "#30147"
+msgid "As licensed players send (IPT)"
+msgstr ""
+
+msgctxt "#30148"
+msgid "v2.9 (TV with display management 2)"
+msgstr ""
+
+msgctxt "#30149"
+msgid "v2.9 (TV with display management 3)"
+msgstr ""
+
+msgctxt "#30150"
+msgid "v2.9 (its v4.0 part cannot be carried)"
+msgstr ""
+
+msgctxt "#30151"
+msgid "HDR10+ average / 99 %"
+msgstr ""
+
+msgctxt "#30152"
+msgid "HDR10+ target display"
+msgstr ""
+
+msgctxt "#30153"
+msgid "HDR10+ curve"
+msgstr ""
+
+msgctxt "#30154"
+msgid "anchors"
+msgstr ""
+
+msgctxt "#30155"
+msgid "Trims"
+msgstr ""
+
+msgctxt "#30156"
+msgid "left out, as the settings say"
+msgstr ""
+
+msgctxt "#30157"
+msgid "L1 from HDR10+ statistics, no tone curve"
+msgstr ""
+
+msgctxt "#30158"
+msgid "measured by Hades from the picture"
+msgstr ""
+
+msgctxt "#30159"
+msgid "Menus in Dolby Vision"
+msgstr ""
+
+msgctxt "#30160"
+msgid "Yes: no change of picture mode"
+msgstr ""
+
+msgctxt "#30161"
+msgid "Left for this video's format"
+msgstr ""
+
+msgctxt "#30162"
+msgid "Not in use (kodi.log says why)"
+msgstr ""
+
+msgctxt "#30163"
+msgid "Atmos"
+msgstr ""
+
+msgctxt "#30164"
+msgid "bed"
+msgstr ""
+
+msgctxt "#30165"
+msgid "objects"
+msgstr ""
+
+msgctxt "#30166"
+msgid "Dialogue level"
+msgstr ""
+
+msgctxt "#30167"
+msgid "v2.9 + v4.0 added (the setting)"
+msgstr ""
+
+msgctxt "#30168"
+msgid "v2.9 + v4.0 added (automatic: mastered brighter than the TV)"
+msgstr ""
+
+msgctxt "#30169"
+msgid "v2.9 (the setting)"
+msgstr ""
+
+msgctxt "#30170"
+msgid "measured by Hades (no HDR10 output)"
+msgstr ""
+
+msgctxt "#30171"
+msgid "v2.9 + v4.0 added (automatic 2: no trims in the video)"
+msgstr ""
+
+msgctxt "#30172"
+msgid "Yes: brighter than the display"
+msgstr ""
+
+msgctxt "#30173"
+msgid "Yes: always (the setting)"
+msgstr ""
+
+msgctxt "#30174"
+msgid "No: not brighter than the display"
+msgstr ""
+
+msgctxt "#30175"
+msgid "No (kodi.log says why)"
+msgstr ""
+
+msgctxt "#30176"
+msgid "Dialogue gain"
+msgstr ""
+
+msgctxt "#30177"
+msgid "sent as"
+msgstr ""
+
+msgctxt "#30178"
+msgid "its own HDR10+ was chosen over its Dolby Vision"
+msgstr ""
+
+msgctxt "#30179"
+msgid "SDR, as chosen in the display settings"
+msgstr ""
+
+msgctxt "#30180"
+msgid "This HDR video is sent as SDR, as \"Play HDR videos as SDR\" asks."
+msgstr ""
+
+msgctxt "#30181"
+msgid "To send it as HDR, set \"Play HDR videos as SDR\" to Never (Settings > System > Display, Expert level)."
+msgstr ""
+
+msgctxt "#30182"
+msgid "converted from HLG, measured by Hades"
+msgstr ""
+
+msgctxt "#30183"
+msgid "Dolby Vision, as your TV expects it"
+msgstr ""
+
+msgctxt "#30184"
+msgid "HDR10, not Dolby Vision"
+msgstr ""
+
+msgctxt "#30185"
+msgid "SDR, not Dolby Vision"
+msgstr ""
+
+msgctxt "#30186"
+msgid "HDR10+, as the film was made"
+msgstr ""
+
+msgctxt "#30187"
+msgid "HDR10, as the film was made"
+msgstr ""
+
+msgctxt "#30188"
+msgid "HLG, as the film was made"
+msgstr ""
+
+msgctxt "#30189"
+msgid "SDR, as the film was made"
+msgstr ""
+
+msgctxt "#30190"
+msgid "SDR: the TV is not told this video is HDR"
+msgstr ""
+
+msgctxt "#30191"
+msgid "Player information"
+msgstr ""
+
+msgctxt "#30192"
+msgid "Everything is working as intended."
+msgstr ""
+
+msgctxt "#30193"
+msgid "Not sent as Dolby Vision: "
+msgstr ""
+
+msgctxt "#30194"
+msgid "Dolby Vision is mapped to SDR for this display."
+msgstr ""
+
+msgctxt "#30195"
+msgid "The TV is not told this video is HDR: "
+msgstr ""
+
+msgctxt "#30196"
+msgid "frames could not be shown in the last 10 seconds."
+msgstr ""
+
+msgctxt "#30197"
+msgid "Your graphics card cannot draw every frame at full precision: the drawing is simplified (see System)."
+msgstr ""
+
+msgctxt "#30198"
+msgid "The enhancement layer is catching up after a seek; the base picture is shown meanwhile."
+msgstr ""
+
+msgctxt "#30199"
+msgid "Motion may be uneven: the display refresh rate does not match the video."
+msgstr ""
+
+msgctxt "#30200"
+msgid "Sound is decoded to PCM: "
+msgstr ""
+
+msgctxt "#30201"
+msgid "What the TV receives could not be read from the graphics driver."
+msgstr ""
+
+msgctxt "#30202"
+msgid "the connector has no HDR property"
+msgstr ""
+
+msgctxt "#30203"
+msgid "the display's identification could not be read"
+msgstr ""
+
+msgctxt "#30204"
+msgid "the display declares no HDR"
+msgstr ""
+
+msgctxt "#30205"
+msgid "the display does not declare this kind of HDR"
+msgstr ""
+
+msgctxt "#30206"
+msgid "the graphics driver did not take the HDR metadata"
+msgstr ""
+
+msgctxt "#30207"
+msgid "HDR is turned off in the display settings"
+msgstr ""
+
+msgctxt "#30208"
+msgid "Sync playback to display is on"
+msgstr ""
+
+msgctxt "#30209"
+msgid "Passthrough is turned off in the audio settings"
+msgstr ""
+
+msgctxt "#30210"
+msgid "Passthrough of this format is turned off in the audio settings"
+msgstr ""
+
+msgctxt "#30211"
+msgid "Connect the TV to an HDMI output that the graphics card drives itself, without a DisplayPort or USB-C adapter."
+msgstr ""
+
+msgctxt "#30212"
+msgid "Check this TV input: its game mode and its Dolby Vision setting."
+msgstr ""
+
+msgctxt "#30213"
+msgid "Set the display mode to 3840x2160 at 24 to 60 Hz in the display settings."
+msgstr ""
+
+msgctxt "#30214"
+msgid "Choose the output for this video again with the button below, or in the player settings."
+msgstr ""
+
+msgctxt "#30215"
+msgid "Turn on Adjust display refresh rate in the player settings."
+msgstr ""
+
+msgctxt "#30216"
+msgid "Check the HDR setting of this TV input and the display settings of Hades."
+msgstr ""
+
+msgctxt "#30217"
+msgid "Turn off Sync playback to display to send the sound untouched."
+msgstr ""
+
+msgctxt "#30218"
+msgid "See the System page."
+msgstr ""
+
+msgctxt "#30219"
+msgid "more notes: see the pages"
+msgstr ""
+
+msgctxt "#30220"
+msgid "Turn on Allow passthrough in the audio settings to send the sound untouched."
+msgstr ""
+
+msgctxt "#30221"
+msgid "Turn on passthrough for this format in the audio settings to send the sound untouched."
+msgstr ""
+
+msgctxt "#30222"
+msgid "The film"
+msgstr ""
+
+msgctxt "#30223"
+msgid "Hades"
+msgstr ""
+
+msgctxt "#30224"
+msgid "Your TV"
+msgstr ""
+
+msgctxt "#30225"
+msgid "CPU"
+msgstr ""
+
+msgctxt "#30226"
+msgid "GPU"
+msgstr ""
+
+msgctxt "#30227"
+msgid "Set Dolby Vision through a display converter back to Automatic in the display settings."
+msgstr ""
+
+msgctxt "#30228"
+msgid "To try it, set Dolby Vision through a display converter to On in the display settings, and back to Automatic if the picture goes."
+msgstr ""
+
+msgctxt "#30229"
+msgid "Dropped"
+msgstr ""
+
+msgctxt "#30230"
+msgid "Skipped"
+msgstr ""
+
+msgctxt "#30231"
+msgid "IPT-PQ-c2 (Dolby Vision)"
+msgstr ""
+
+msgctxt "#30232"
+msgid "Adjust display refresh rate is on, but the display has no mode at the rate of this video (or the whitelist of the display settings leaves it out)."
+msgstr ""
+
+msgctxt "#30233"
+msgid "Picture area"
+msgstr ""
+
+msgctxt "#30234"
+msgid "Colour"
+msgstr ""
+
+msgctxt "#30235"
+msgid "Matrix"
+msgstr ""
+
+msgctxt "#30236"
+msgid "MaxCLL / MaxFALL"
+msgstr ""
+
+msgctxt "#30237"
+msgid "Decoding"
+msgstr ""
+
+msgctxt "#30238"
+msgid "Metadata sent"
+msgstr ""
+
+msgctxt "#30239"
+msgid "Graphics card"
+msgstr ""
+
+msgctxt "#30240"
+msgid "Sound"
+msgstr ""
+
+msgctxt "#30241"
+msgid "HDMI EOTF"
+msgstr ""
+
+msgctxt "#30242"
+msgid "Signalling"
+msgstr ""
+
+msgctxt "#30243"
+msgid "TV offers"
+msgstr ""
+
+msgctxt "#30244"
+msgid "Sound out"
+msgstr ""
+
+msgctxt "#30245"
+msgid "Native, TV-led"
+msgstr ""
+
+msgctxt "#30246"
+msgid "Rebuilt, sent as HDR10"
+msgstr ""
+
+msgctxt "#30247"
+msgid "Rebuilt, sent as HDR10+"
+msgstr ""
+
+msgctxt "#30248"
+msgid "Rebuilt, mapped to SDR"
+msgstr ""
+
+msgctxt "#30249"
+msgid "Ordinary, no Dolby Vision"
+msgstr ""
+
+msgctxt "#30250"
+msgid "Dolby Vision (TV-led)"
+msgstr ""
+
+msgctxt "#30251"
+msgid "HDR10 (PQ)"
+msgstr ""
+
+msgctxt "#30252"
+msgid "HDR10+ (PQ)"
+msgstr ""
+
+msgctxt "#30253"
+msgid "HLG"
+msgstr ""
+
+msgctxt "#30254"
+msgid "SDR"
+msgstr ""
+
+msgctxt "#30255"
+msgid "HDR (gamma)"
+msgstr ""
+
+msgctxt "#30256"
+msgid "none (Dolby Vision)"
+msgstr ""
+
+msgctxt "#30257"
+msgid "DV 12-bit in RGB 8-bit"
+msgstr ""
+
+msgctxt "#30258"
+msgid "Dolby vendor InfoFrame"
+msgstr ""
+
+msgctxt "#30259"
+msgid "HDMI 1.4b vendor InfoFrame"
+msgstr ""
+
+msgctxt "#30260"
+msgid "spare"
+msgstr ""
+
+msgctxt "#30261"
+msgid "Off"
+msgstr ""
+
+msgctxt "#30262"
+msgid "In the file"
+msgstr ""
+
+msgctxt "#30263"
+msgid "Used by Hades"
+msgstr ""
+
+msgctxt "#30264"
+msgid "Sent to the TV"
+msgstr ""
+
+msgctxt "#30265"
+msgid "Dolby Vision metadata levels"
+msgstr ""
+
+msgctxt "#30266"
+msgid "L3 min / avg / max"
+msgstr ""
+
+msgctxt "#30267"
+msgid "L4 anchor / power"
+msgstr ""
+
+msgctxt "#30268"
+msgid "L8 target ids"
+msgstr ""
+
+msgctxt "#30269"
+msgid "L9 primaries"
+msgstr ""
+
+msgctxt "#30270"
+msgid "L10 id: nits"
+msgstr ""
+
+msgctxt "#30271"
+msgid "L11 type / white / ref"
+msgstr ""
+
+msgctxt "#30272"
+msgid "L254 mode / version"
+msgstr ""
+
+msgctxt "#30273"
+msgid "L255 mode / version"
+msgstr ""
+
+msgctxt "#30274"
+msgid "custom"
+msgstr ""
+
+msgctxt "#30275"
+msgid "Speakers"
+msgstr ""
+
+msgctxt "#30276"
+msgid "The levels are shown while a Dolby Vision video plays."
+msgstr ""
+
+msgctxt "#30277"
+msgid "Graphics card"
+msgstr ""
+
+msgctxt "#30278"
+msgid "Processor (software)"
+msgstr ""
+
+msgctxt "#30279"
+msgid "Layout assumed from its channel count"
+msgstr ""
+
+msgctxt "#30280"
+msgid "the display converter is turned off in the settings"
+msgstr ""
+
+msgctxt "#30281"
+msgid "this display converter is not known to work"
+msgstr ""
+
+msgctxt "#30282"
+msgid "L1 from HDR10+, its tone curve applied"
+msgstr ""
+
+msgctxt "#30283"
+msgid "Active area zoom"
+msgstr ""
+
+msgctxt "#30284"
+msgid "Checking"
+msgstr ""
+
+msgctxt "#30285"
+msgid "On: the refresh follows the video"
+msgstr ""
+
+msgctxt "#30286"
+msgid "On, at the mode's own rate"
+msgstr ""
+
+msgctxt "#30287"
+msgid "Not on: the mode follows the video"
+msgstr ""
+
+msgctxt "#30288"
+msgid "Not on: no mode at the video's rate"
+msgstr ""
+
+msgctxt "#30289"
+msgid "Off: Dolby Vision changes the mode"
+msgstr ""
+
+msgctxt "#30290"
+msgid "Off, as set in System > Display"
+msgstr ""
+
+msgctxt "#30291"
+msgid "this TV input offers no Dolby Vision"
+msgstr ""
+
+msgctxt "#30292"
+msgid "the TV's EDID was read only in part"
+msgstr ""
+
+msgctxt "#30293"
+msgid "unknown: EDID read in part"
+msgstr ""
+
+msgctxt "#30294"
+msgid "DV Low-Latency only, its peak or colours cannot be used"
+msgstr ""
+
+msgctxt "#30295"
+msgid "Output of this video"
+msgstr ""
+
+msgctxt "#30296"
+msgid "Used: Hades reads the level's values and acts on them. Sent: what the TV receives."
+msgstr ""
+
+msgctxt "#30297"
+msgid "the level is there"
+msgstr ""
+
+msgctxt "#30298"
+msgid "it is not"
+msgstr ""
+
+msgctxt "#30299"
+msgid "Composer bits"
+msgstr ""
+
+msgctxt "#30300"
+msgid "Composer maps"
+msgstr ""
+
+msgctxt "#30301"
+msgid "Dolby Vision carries its own, in the picture."
+msgstr ""
+
+msgctxt "#30302"
+msgid "8 bits (12-bit DV inside)"
+msgstr ""
+
+msgctxt "#30303"
+msgid "Playback"
+msgstr ""
+
+msgctxt "#30304"
+msgid "Adapted to the TV"
+msgstr ""
+
+msgctxt "#30305"
+msgid "Scaling method"
+msgstr ""
+
+msgctxt "#30306"
+msgid "Mapping sent"
+msgstr ""
+
+msgctxt "#30307"
+msgid "Rendering speed"
+msgstr ""
+
+msgctxt "#30308"
+msgid "out"
+msgstr ""
+
+msgctxt "#30309"
+msgid "Connection to the TV"
+msgstr ""
+
+msgctxt "#30310"
+msgid "Connector"
+msgstr ""
+
+msgctxt "#30311"
+msgid "Link"
+msgstr ""
+
+msgctxt "#30312"
+msgid "lanes at"
+msgstr ""
+
+msgctxt "#30313"
+msgid "scrambled"
+msgstr ""
+
+msgctxt "#30314"
+msgid "not said by the driver"
+msgstr ""
+
+msgctxt "#30315"
+msgid "Output format"
+msgstr ""
+
+msgctxt "#30316"
+msgid "On"
+msgstr ""
+
+msgctxt "#30317"
+msgid "Offered by the TV, not used"
+msgstr ""
+
+msgctxt "#30318"
+msgid "Held off for HDR10+"
+msgstr ""
+
+msgctxt "#30319"
+msgid "Not offered by the TV"
+msgstr ""
+
+msgctxt "#30320"
+msgid "Versions"
+msgstr ""
+
+msgctxt "#30321"
+msgid "Build"
+msgstr ""
+
+msgctxt "#30322"
+msgid "Graphics driver"
+msgstr ""
+
+msgctxt "#30323"
+msgid "Kernel"
+msgstr ""
+
+msgctxt "#30324"
+msgid "What your TV declares"
+msgstr ""
+
+msgctxt "#30325"
+msgid "HDR formats"
+msgstr ""
+
+msgctxt "#30326"
+msgid "VRR range"
+msgstr ""
+
+msgctxt "#30327"
+msgid "Maximum FRL"
+msgstr ""
+
+msgctxt "#30328"
+msgid "Not declared"
+msgstr ""
+
+msgctxt "#30329"
+msgid "Declared"
+msgstr ""
+
+msgctxt "#30330"
+msgid "TMDS only"
+msgstr ""
+
+msgctxt "#30331"
+msgid "up to"
+msgstr ""
+
+msgctxt "#30332"
+msgid "to"
+msgstr ""
+
+msgctxt "#30333"
+msgid "from"
+msgstr ""
+
+msgctxt "#30334"
+msgid "Standard and Low-Latency"
+msgstr ""
+
+msgctxt "#30335"
+msgid "Low-Latency only"
+msgstr ""
+
+msgctxt "#30336"
+msgid "HDMI 1.4b signalling"
+msgstr ""
+
+msgctxt "#30337"
+msgid "A block that Hades cannot use"
+msgstr ""
+
+msgctxt "#30338"
+msgid "Not read from the TV"
+msgstr ""
+
+
+msgctxt "#32001"
+msgid "Backgrounds"
+msgstr "Backgrounds"
+
+msgctxt "#32002"
+msgid "Text colours"
+msgstr "Text colours"
+
+msgctxt "#32003"
+msgid "Advanced"
+msgstr "Advanced"
+
+msgctxt "#32010"
+msgid "Panel background"
+msgstr "Panel background"
+
+msgctxt "#32011"
+msgid "Panel background opacity"
+msgstr "Panel background opacity"
+
+msgctxt "#32012"
+msgid "Row divider lines"
+msgstr "Row divider lines"
+
+msgctxt "#32013"
+msgid "Row divider lines opacity"
+msgstr "Row divider lines opacity"
+
+msgctxt "#32014"
+msgid "Lines under the section headings and small cards"
+msgstr "Lines under the section headings and small cards"
+
+msgctxt "#32015"
+msgid "Section heading lines and small cards opacity"
+msgstr "Section heading lines and small cards opacity"
+
+msgctxt "#32016"
+msgid "Panel border"
+msgstr "Panel border"
+
+msgctxt "#32020"
+msgid "Main text"
+msgstr "Main text"
+
+msgctxt "#32021"
+msgid "Labels"
+msgstr "Labels"
+
+msgctxt "#32022"
+msgid "Values (secondary text)"
+msgstr "Values (secondary text)"
+
+msgctxt "#32023"
+msgid "Column and section titles"
+msgstr "Column and section titles"
+
+msgctxt "#32024"
+msgid "Accent (film details, highlights)"
+msgstr "Accent (film details, highlights)"
+
+msgctxt "#32025"
+msgid "Warning"
+msgstr "Warning"
+
+msgctxt "#32040"
+msgid "Custom colour (hex)"
+msgstr "Custom colour (hex)"
+
+msgctxt "#32041"
+msgid "RRGGBB or AARRGGBB; empty = use the list above"
+msgstr "RRGGBB or AARRGGBB; empty = use the list above"
+
+msgctxt "#32100"
+msgid "Original"
+msgstr "Original"
+
+msgctxt "#32101"
+msgid "White"
+msgstr "[COLOR FFFFFFFF]●[/COLOR] White"
+
+msgctxt "#32102"
+msgid "Light grey"
+msgstr "[COLOR FFC6CED2]●[/COLOR] Light grey"
+
+msgctxt "#32103"
+msgid "Grey"
+msgstr "[COLOR FF7D8A90]●[/COLOR] Grey"
+
+msgctxt "#32104"
+msgid "Black"
+msgstr "[COLOR FF000000]●[/COLOR] Black"
+
+msgctxt "#32105"
+msgid "Dark grey"
+msgstr "[COLOR FF1C2327]●[/COLOR] Dark grey"
+
+msgctxt "#32106"
+msgid "Dark blue"
+msgstr "[COLOR FF0B1626]●[/COLOR] Dark blue"
+
+msgctxt "#32107"
+msgid "Dark green"
+msgstr "[COLOR FF0E1F16]●[/COLOR] Dark green"
+
+msgctxt "#32108"
+msgid "Dark red"
+msgstr "[COLOR FF2A0F14]●[/COLOR] Dark red"
+
+msgctxt "#32109"
+msgid "Dark purple"
+msgstr "[COLOR FF1E1230]●[/COLOR] Dark purple"
+
+msgctxt "#32110"
+msgid "Green"
+msgstr "[COLOR FF65E18D]●[/COLOR] Green"
+
+msgctxt "#32111"
+msgid "Yellow"
+msgstr "[COLOR FFF2C46D]●[/COLOR] Yellow"
+
+msgctxt "#32112"
+msgid "Orange"
+msgstr "[COLOR FFFF9F43]●[/COLOR] Orange"
+
+msgctxt "#32113"
+msgid "Light blue"
+msgstr "[COLOR FF4FC3F7]●[/COLOR] Light blue"
+
+msgctxt "#32114"
+msgid "Teal"
+msgstr "[COLOR FF12A0C7]●[/COLOR] Teal"
+
+msgctxt "#32115"
+msgid "Red"
+msgstr "[COLOR FFFF6B6B]●[/COLOR] Red"
+
+msgctxt "#32116"
+msgid "Magenta"
+msgstr "[COLOR FFE040FB]●[/COLOR] Magenta"
+
+msgctxt "#32117"
+msgid "Lavender"
+msgstr "[COLOR FFB39DDB]●[/COLOR] Lavender"
+
+msgctxt "#32044"
+msgid "Rounded panel background"
+msgstr "Rounded panel background"
+
+msgctxt "#32045"
+msgid "Info box background"
+msgstr "Info box background"
+
+msgctxt "#32046"
+msgid "Info box opacity"
+msgstr "Info box opacity"
+
+msgctxt "#32047"
+msgid "Button background"
+msgstr "Button background"
+
+msgctxt "#32048"
+msgid "Button opacity"
+msgstr "Button opacity"
+
+msgctxt "#32049"
+msgid "Top highlight lines (panel and boxes)"
+msgstr "Top highlight lines (panel and boxes)"
+
+msgctxt "#32050"
+msgid "Done: panel regenerated"
+msgstr "Done: panel regenerated"
+
+msgctxt "#32051"
+msgid "Selected tab / focus background"
+msgstr "Selected tab / focus background"
+
+msgctxt "#32052"
+msgid "Selected tab / focus opacity"
+msgstr "Selected tab / focus opacity"
+
+msgctxt "#32053"
+msgid "Active tab background (not focused)"
+msgstr "Active tab background (not focused)"
+
+msgctxt "#32054"
+msgid "Active tab opacity"
+msgstr "Active tab opacity"
+
+msgctxt "#32055"
+msgid "Speaker active circle = selected tab colour"
+msgstr "Speaker active circle = selected tab colour"
+
+msgctxt "#32056"
+msgid "Speaker active circle background"
+msgstr "Speaker active circle background"
+
+msgctxt "#32057"
+msgid "Speaker active circle opacity"
+msgstr "Speaker active circle opacity"
+
+msgctxt "#32058"
+msgid "Speaker inactive circle background"
+msgstr "Speaker inactive circle background"
+
+msgctxt "#32059"
+msgid "Speaker inactive circle opacity"
+msgstr "Speaker inactive circle opacity"
+
+msgctxt "#32060"
+msgid "Speaker active label"
+msgstr "Speaker active label"
+
+msgctxt "#32061"
+msgid "Speaker inactive label"
+msgstr "Speaker inactive label"
+
+msgctxt "#32400"
+msgid "Original"
+msgstr "[COLOR FF0D0E12]●[/COLOR] Original"
+
+msgctxt "#32401"
+msgid "Original"
+msgstr "[COLOR FF14171C]●[/COLOR] Original"
+
+msgctxt "#32402"
+msgid "Original"
+msgstr "[COLOR FF15181E]●[/COLOR] Original"
+
+msgctxt "#32403"
+msgid "Original"
+msgstr "[COLOR FFFFDEB3]●[/COLOR] Original"
+
+msgctxt "#32404"
+msgid "Original"
+msgstr "[COLOR FF20242C]●[/COLOR] Original"
+
+msgctxt "#32405"
+msgid "Original"
+msgstr "[COLOR FFFFDEB3]●[/COLOR] Original"
+
+msgctxt "#32406"
+msgid "Original"
+msgstr "[COLOR FF0D0E12]●[/COLOR] Original"
+
+msgctxt "#32407"
+msgid "Original"
+msgstr "[COLOR FF1E2128]●[/COLOR] Original"
+
+msgctxt "#32408"
+msgid "Original"
+msgstr "[COLOR FF2A2E37]●[/COLOR] Original"
+
+msgctxt "#32409"
+msgid "Original"
+msgstr "[COLOR FF262A33]●[/COLOR] Original"
+
+msgctxt "#32410"
+msgid "Original"
+msgstr "[COLOR FFEEF1F6]●[/COLOR] Original"
+
+msgctxt "#32411"
+msgid "Original"
+msgstr "[COLOR FF8C93A1]●[/COLOR] Original"
+
+msgctxt "#32412"
+msgid "Original"
+msgstr "[COLOR FFB6BDC9]●[/COLOR] Original"
+
+msgctxt "#32413"
+msgid "Original"
+msgstr "[COLOR FFA9B6CC]●[/COLOR] Original"
+
+msgctxt "#32414"
+msgid "Original"
+msgstr "[COLOR FFFFDEB3]●[/COLOR] Original"
+
+msgctxt "#32415"
+msgid "Original"
+msgstr "[COLOR FFF2A23C]●[/COLOR] Original"
+
+msgctxt "#32416"
+msgid "Original"
+msgstr "[COLOR FF0D0E12]●[/COLOR] Original"
+
+msgctxt "#32417"
+msgid "Original"
+msgstr "[COLOR FF6C7482]●[/COLOR] Original"
+
+msgctxt "#32062"
+msgid "Reset all colours and opacity"
+msgstr "Reset all colours and opacity"
+
+msgctxt "#32063"
+msgid "Reset (the web server settings were kept)"
+msgstr "Reset (the web server settings were kept)"
+
+msgctxt "#32064"
+msgid "All colours, opacities, the panel shape and the stripes go back to the defaults. The web server and language settings stay. Continue?"
+msgstr "All colours, opacities, the panel shape and the stripes go back to the defaults. The web server and language settings stay. Continue?"
+
+msgctxt "#32300"
+msgid "Mobile app (TinyPPI Mobile compatible)"
+msgstr "Mobile app (TinyPPI Mobile compatible)"
+
+msgctxt "#32301"
+msgid "Enable web server for the mobile app (read-only)"
+msgstr "Enable web server for the mobile app (read-only)"
+
+msgctxt "#32302"
+msgid "Web server port"
+msgstr "Web server port"
+
+msgctxt "#32303"
+msgid "Access token (8 characters; enter it in the app)"
+msgstr "Access token (8 characters; enter it in the app)"
+
+msgctxt "#32304"
+msgid "Allow control and media library in the app"
+msgstr "Allow control and media library in the app"
+
+msgctxt "#32305"
+msgid "MDBList API key (more rating sources in the app)"
+msgstr "MDBList API key (more rating sources in the app)"
+
+msgctxt "#32074"
+msgid "Show the height channels for Atmos / DTS:X (7.1.4 / 5.1.4 assumed)"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Height channel background (active)"
+msgstr ""
+
+msgctxt "#32076"
+msgid "Height channel background opacity (active)"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Height channel text (active)"
+msgstr ""

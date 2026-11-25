@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+	<fontset id="Default" unicode="true">
+		<font><name>font10</name><filename>Inter-Regular.ttf</filename><size>21</size><linespacing>1.26</linespacing></font>
+		<font><name>font12</name><filename>Inter-Regular.ttf</filename><size>24</size></font>
+		<font><name>font20_title</name><filename>Inter-Bold.ttf</filename><size>30</size></font>
+		<font><name>font32</name><filename>Inter-Bold.ttf</filename><size>30</size></font>
+		<font><name>font37</name><filename>Inter-Bold.ttf</filename><size>30</size></font>
+		<font><name>font_flag</name><filename>Inter-Bold.ttf</filename><size>30</size></font>
+	</fontset>
+</fonts>

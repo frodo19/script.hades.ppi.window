@@ -13,6 +13,7 @@ Tested on LibreELEC Hades (Kodi 22) with the skin Arctic Fuse 3; not tested else
 ## What it does
 
 - Shows the Hades pages (overview, video, Dolby Vision, sound, system) with Hades' own values and texts.
+- English and Hungarian texts: automatic by the language of Kodi, or chosen in the add-on settings (anything but Hungarian is shown in English). The English texts are the original Hades ones.
 - Bind a key to `RunScript(script.hades.ppi.window)` (for example with Keymap Editor). The same key or Back closes it.
 - Rounded panel, adjustable colours and opacity, separate colours for the speaker circles and the height channels.
 - Speakers: the layout comes from Hades; a legend tells which speakers get sound, which only render objects (receiver) and which are only declared. The four Atmos / DTS:X height channels (7.1.4 / 5.1.4 assumed) can be switched on in the settings.

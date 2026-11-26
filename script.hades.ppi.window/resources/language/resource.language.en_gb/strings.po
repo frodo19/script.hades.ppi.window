@@ -1664,6 +1664,22 @@ msgctxt "#32064"
 msgid "All colours, opacities, the panel shape and the stripes go back to the defaults. The web server and language settings stay. Continue?"
 msgstr "All colours, opacities, the panel shape and the stripes go back to the defaults. The web server and language settings stay. Continue?"
 
+msgctxt "#32070"
+msgid "Language"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Automatic (by Kodi)"
+msgstr ""
+
+msgctxt "#32072"
+msgid "Magyar"
+msgstr ""
+
+msgctxt "#32073"
+msgid "English"
+msgstr ""
+
 msgctxt "#32300"
 msgid "Mobile app (TinyPPI Mobile compatible)"
 msgstr "Mobile app (TinyPPI Mobile compatible)"

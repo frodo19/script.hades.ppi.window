@@ -64,20 +64,27 @@ def colour_map(addon):
 
 
 def language(addon=None):
-    """This build ships the English (original Hades) texts only."""
-    return 'en'
+    """'hu' or 'en': the setting, or (automatic) the language of Kodi; anything but Hungarian is English."""
+    addon = addon or xbmcaddon.Addon(ID)
+    v = addon.getSetting('lang')
+    if v in ('hu', 'en'):
+        return v
+    try:
+        return 'hu' if xbmc.getLanguage(xbmc.ISO_639_1).lower().startswith('hu') else 'en'
+    except Exception:  # the language of Kodi is not known
+        return 'en'
 
 
 def includes_file(path):
     return os.path.join(path, 'resources', 'skins', 'Default', '1080i',
-                        'Includes.xml')
+                        'Includes.en.xml' if language() == 'en' else 'Includes.xml')
 
 
 def generate(path):
     """Write PlayerInfo.xml from the template and the settings; returns True when it was written."""
     addon = xbmcaddon.Addon(ID)
     m = colour_map(addon)
-    with open(os.path.join(path, 'resources', 'template', 'PlayerInfo.tpl.xml'), encoding='utf-8') as f:
+    with open(os.path.join(path, 'resources', 'template', 'PlayerInfo.tpl.en.xml' if language(addon) == 'en' else 'PlayerInfo.tpl.xml'), encoding='utf-8') as f:
         text = f.read()
     text = re.sub(r'@@(\w+)@@', lambda g: m.get(g.group(1), ''), text)
     out = os.path.join(path, 'resources', 'skins', 'Default', '1080i', 'PlayerInfo.xml')

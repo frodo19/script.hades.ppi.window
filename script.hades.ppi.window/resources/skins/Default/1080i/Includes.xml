@@ -9,12 +9,12 @@
 -->
 <includes>
 	<variable name="WndHadesAudioBitstreamHowVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),truehd) + String.StartsWith(VideoPlayer.AudioCodec,truehd)">passthrough</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),eac3) + String.StartsWith(VideoPlayer.AudioCodec,eac3)">passthrough</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),ac3) + String.IsEqual(VideoPlayer.AudioCodec,ac3)">passthrough</value>
-		<value condition="String.StartsWith(Window(Home).Property(hades.audio.format),dts) + String.StartsWith(VideoPlayer.AudioCodec,dts)">passthrough</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),mlp) + String.IsEqual(VideoPlayer.AudioCodec,mlp)">passthrough</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),ac3) | String.IsEqual(Window(Home).Property(hades.audio.format),eac3)">re-encoded</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),truehd) + String.StartsWith(VideoPlayer.AudioCodec,truehd)">hangtovábbítás</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),eac3) + String.StartsWith(VideoPlayer.AudioCodec,eac3)">hangtovábbítás</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),ac3) + String.IsEqual(VideoPlayer.AudioCodec,ac3)">hangtovábbítás</value>
+		<value condition="String.StartsWith(Window(Home).Property(hades.audio.format),dts) + String.StartsWith(VideoPlayer.AudioCodec,dts)">hangtovábbítás</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),mlp) + String.IsEqual(VideoPlayer.AudioCodec,mlp)">hangtovábbítás</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),ac3) | String.IsEqual(Window(Home).Property(hades.audio.format),eac3)">újrakódolva</value>
 	</variable>
 	<variable name="WndHadesAudioBitstreamVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.format),truehd) + String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">TrueHD Atmos</value>
@@ -38,23 +38,23 @@
 		<value>$INFO[Player.Process(audiobedlayout),alap , + ]$INFO[Player.Process(audio.object.count),, objektumok]</value>
 	</variable>
 	<variable name="WndHadesAudioOutVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),none)">no audio output</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),syncdisplay)">PCM, decoded ($LOCALIZE[13510]: $LOCALIZE[305])</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),passthroughoff)">PCM, decoded (Passthrough is turned off in the audio settings)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),codecoff)">PCM, decoded (Passthrough of this format is turned off in the audio settings)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm)">PCM, decoded</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),none)">nincs hangkimenet</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),syncdisplay)">PCM, dekódolva ($LOCALIZE[13510]: $LOCALIZE[305])</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),passthroughoff)">PCM, dekódolva (A hangtovábbítás ki van kapcsolva a hangbeállításokban)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm) + String.IsEqual(Window(Home).Property(hades.audio.why),codecoff)">PCM, dekódolva (Ennek a formátumnak a továbbítása ki van kapcsolva a hangbeállításokban)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm)">PCM, dekódolva</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),bitstream)">$VAR[WndHadesAudioBitstreamVar]$VAR[WndHadesAudioBitstreamHowVar, (,)]</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesAudioSignalVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),bitstream)">IEC 61937, $INFO[Window(Home).Property(hades.audio.channels)] x $INFO[Window(Home).Property(hades.audio.rate),, kHz]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.bits),float)">PCM, $INFO[Window(Home).Property(hades.audio.channels)] x $INFO[Window(Home).Property(hades.audio.rate),, kHz], floating point</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.bits),float)">PCM, $INFO[Window(Home).Property(hades.audio.channels)] x $INFO[Window(Home).Property(hades.audio.rate),, kHz], lebegőpontos</value>
 		<value>PCM, $INFO[Window(Home).Property(hades.audio.channels)] x $INFO[Window(Home).Property(hades.audio.rate),, kHz]$INFO[Window(Home).Property(hades.audio.bits),$COMMA , bits]</value>
 	</variable>
 	<variable name="WndHadesAudioWhyVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),syncdisplay)">Sync playback to display is on</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),passthroughoff)">Passthrough is turned off in the audio settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),codecoff)">Passthrough of this format is turned off in the audio settings</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),syncdisplay)">A lejátszás szinkronizálása a kijelzőhöz be van kapcsolva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),passthroughoff)">A hangtovábbítás ki van kapcsolva a hangbeállításokban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),codecoff)">Ennek a formátumnak a továbbítása ki van kapcsolva a hangbeállításokban</value>
 	</variable>
 	<variable name="WndHadesBarCpuVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.sys.cpu)) + !String.IsEqual(System.CPUTemperature,$LOCALIZE[10005])">$INFO[Window(Home).Property(hades.sys.cpu),,%]$INFO[System.CPUTemperature, · ,]</value>
@@ -62,125 +62,125 @@
 		<value condition="!String.IsEqual(System.CPUTemperature,$LOCALIZE[10005])">$INFO[System.CPUTemperature]</value>
 	</variable>
 	<variable name="WndHadesDVAheadVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.ahead),yes)">Yes</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.ahead),yes)">Igen</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.ahead),no)">Nem</value>
 	</variable>
 	<variable name="WndHadesDVCmSentVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),2)">v2.9 (TV with display management 2)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),3)">v2.9 (TV with display management 3)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v29)">v2.9 (its v4.0 part cannot be carried)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40added)">v2.9 + v4.0 added (the setting)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40auto)">v2.9 + v4.0 added (automatic: mastered brighter than the TV)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40auto2)">v2.9 + v4.0 added (automatic 2: no trims in the video)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v29set)">v2.9 (the setting)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),2)">v2.9 (2-es display managementű kijelző)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),3)">v2.9 (3-as display managementű kijelző)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v29)">v2.9 (a v4.0 része nem hordozható)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40added)">v2.9 + v4.0 hozzáadva (beállítva)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40auto)">v2.9 + v4.0 hozzáadva (automatikus: a kijelzőnél fényesebbre masterelve)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v40auto2)">v2.9 + v4.0 hozzáadva (automatikus 2: nincs trim a videóban)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.cmsent),v29set)">v2.9 (beállítva)</value>
 	</variable>
 	<variable name="WndHadesDVDisplayVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),standard)">Dolby Vision Standard (TV-led)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),legacy)">DV Standard, HDMI 1.4b signalling</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),invalid)">Dolby Vision, data not valid</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),lowlatency)">DV without the Standard mode</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),part)">unknown: EDID read in part</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),none)">no Dolby Vision</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),legacy)">DV Standard, HDMI 1.4b jelzés</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),invalid)">Dolby Vision, az adatok érvénytelenek</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),lowlatency)">DV a Standard mód nélkül</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),part)">ismeretlen: az EDID csak részben olvasható</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.display),none)">nincs Dolby Vision</value>
 	</variable>
 	<variable name="WndHadesDVL2Var">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l2),0)">none</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l2),0)">nincs</value>
 		<value>$INFO[Window(Home).Property(hades.dv.l2)]$INFO[Window(Home).Property(hades.dv.l2targets),: , nits]</value>
 	</variable>
 	<variable name="WndHadesDVL6Var">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l6),none)">not given</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l6),none)">nincs megadva</value>
 		<value>$INFO[Window(Home).Property(hades.dv.l6)]</value>
 	</variable>
 	<variable name="WndHadesDVL9Var">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l9),custom)">custom</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.l9),custom)">egyéni</value>
 		<value>$INFO[Window(Home).Property(hades.dv.l9)]</value>
 	</variable>
 	<variable name="WndHadesDVLayersShortVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),FELGAP)">BL (FEL resynchronizing)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),FELGAP)">BL (FEL újraszinkronizál)</value>
 		<value>$VAR[WndHadesDVLayersVar]</value>
 	</variable>
 	<variable name="WndHadesDVLayersVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),FEL)">BL + EL (FEL)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),FELGAP)">BL (FEL: enhancement layer resynchronizing)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),FELGAP)">BL (FEL: a kiegészítő réteg újraszinkronizál)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),MEL)">BL + EL (MEL)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),MELSKIP)">BL + EL (MEL, not decoded)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),MELSKIP)">BL + EL (MEL, nincs dekódolva)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.layers),BL)">BL</value>
 	</variable>
 	<variable name="WndHadesDVNotSentVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.notsent),none)">none</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.notsent),none)">nincs</value>
 		<value>$INFO[Window(Home).Property(hades.dv.notsent)]</value>
 	</variable>
 	<variable name="WndHadesDVPathVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.path),direct)">direct</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.path),composed)">composed</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.path),direct)">közvetlen</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.path),composed)">összeállított</value>
 	</variable>
 	<variable name="WndHadesDVReasonVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),settings)">turned off in the settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),choice)">another output was chosen for this video</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),dualhdr)">its own HDR10+ was chosen over its Dolby Vision</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),stereo)">Dolby Vision is not sent in 3D: each view is rebuilt</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),failed)">failed; tried again with a later video</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),edid)">EDID not readable; tried with the next video</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),display)">this TV input has no Dolby Vision Standard</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),nodv)">this TV input offers no Dolby Vision</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),edidpart)">the TV's EDID was read only in part</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lloff)">DV Low-Latency only, turned off in the settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lldriver)">the output driver cannot send DV Low-Latency</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lltarget)">DV Low-Latency only, its peak or colours cannot be used</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),hdmi14bdriver)">the driver cannot send the HDMI 1.4b signalling</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),legacy)">older DV signalling (HDMI 1.4b), not sent</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),invalid)">the TV's Dolby Vision data is not valid</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),output)">the video output does not support it</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),range)">the TV cannot select the RGB range (NVIDIA)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),mode)">the output mode is not 3840x2160 at 24 to 60 Hz</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),refresh)">the refresh rate is fixed outside 24 to 60 Hz</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),rate)">the display takes it at 2160p up to 30 Hz only</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),view)">the view settings (zoom, stretch or shift)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),sdrbase)">the SDR base layer could not be composed</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),hlgbase)">HLG base layer: its RPU declares no PQ picture</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converter)">the TV is on a DisplayPort output or converter</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converteroff)">the display converter is turned off in the settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converterunlisted)">this display converter is not known to work</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),sink)">the TV is driven as DVI (no HDMI InfoFrames)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),frl)">the HDMI link runs in FRL mode; it needs TMDS</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),link)">the link cannot carry this mode in 8-bit RGB</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),driveredid)">the graphics driver rejects this TV's DV block</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),refused)">refused by the driver (see the kernel log)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),nomode)">this output has no 3840x2160 mode at 24 to 60 Hz</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),noratemode)">this output has no 3840x2160 mode at this rate</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),capture)">the driver lacks something DV needs (see log)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),vaapioff)">VAAPI is off in the settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),vaapicodec)">VAAPI is off for its codec in the settings</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),software)">decoded by the processor (VAAPI could not)</value>
-		<value>not available for this video</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),settings)">a beállításokban kikapcsolva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),choice)">ehhez a videóhoz másik kimenet lett kiválasztva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),dualhdr)">a saját HDR10+-a lett választva a Dolby Vision helyett</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),stereo)">A Dolby Vision 3D-ben nem megy ki: minden nézet újraépül</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),failed)">sikertelen; a következő videónál újra próbálja</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),edid)">az EDID nem olvasható; a következő videónál újra próbálja</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),display)">ez a kijelzőbemenet nem tudja a Dolby Vision Standardot</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),nodv)">ez a kijelzőbemenet nem kínál Dolby Visiont</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),edidpart)">a kijelző EDID-jét csak részben olvasták ki</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lloff)">csak DV Low-Latency, a beállításokban kikapcsolva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lldriver)">a kimeneti illesztő nem tud DV Low-Latencyt küldeni</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),lltarget)">csak DV Low-Latency, a csúcsfényereje vagy a színei nem használhatók</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),hdmi14bdriver)">az illesztő nem tudja elküldeni a HDMI 1.4b jelzést</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),legacy)">régebbi DV jelzés (HDMI 1.4b), nincs elküldve</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),invalid)">a kijelző Dolby Vision adatai érvénytelenek</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),output)">a videokimenet nem támogatja</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),range)">a kijelző nem tudja kiválasztani az RGB tartományt (NVIDIA)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),mode)">a kimeneti mód nem 3840x2160, 24–60 Hz</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),refresh)">a képfrissítési frekvencia 24–60 Hz-en kívülre van rögzítve</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),rate)">a kijelző csak 2160p-n, legfeljebb 30 Hz-en fogadja</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),view)">a nézetbeállítások (nagyítás, nyújtás vagy eltolás)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),sdrbase)">az SDR alapréteget nem sikerült összeállítani</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),hlgbase)">HLG alapréteg: az RPU-ja nem jelez PQ képet</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converter)">a kijelző DisplayPort kimeneten vagy átalakítón van</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converteroff)">a kijelzőátalakító ki van kapcsolva a beállításokban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),converterunlisted)">erről a kijelzőátalakítóról nem ismert, hogy működik</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),sink)">a kijelző DVI-ként van vezérelve (nincsenek HDMI InfoFrame-ek)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),frl)">a HDMI kapcsolat FRL módban fut; TMDS kell hozzá</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),link)">a kapcsolat ezt a módot 8 bites RGB-ben nem tudja hordozni</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),driveredid)">a grafikus illesztő elutasítja a kijelző DV blokkját</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),refused)">az illesztő elutasította (lásd a kernelnaplót)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),nomode)">ennek a kimenetnek nincs 3840x2160-as módja 24–60 Hz-en</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),noratemode)">ennek a kimenetnek nincs 3840x2160-as módja ezen a frekvencián</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),capture)">az illesztőből hiányzik valami, amit a DV igényel (lásd a naplót)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),vaapioff)">a VAAPI ki van kapcsolva a beállításokban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),vaapicodec)">a VAAPI ennél a kodeknél ki van kapcsolva a beállításokban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),software)">a processzor dekódolta (a VAAPI nem tudta)</value>
+		<value>ennél a videónál nem elérhető</value>
 	</variable>
 	<variable name="WndHadesDVTransportVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">Low-Latency, mapped by Hades (4:2:2, 12 bits)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source) + String.IsEqual(Window(Home).Property(hades.dv.signal),ipt)">As licensed players send (IPT)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source) + String.IsEqual(Window(Home).Property(hades.dv.signal),ictcp)">As composed (ICtCp)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source)">As composed (YCbCr)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),fallback) + String.IsEqual(Window(Home).Property(hades.dv.composer),reshaping)">Converted to BT.2020 (libplacebo's reshaping)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),fallback)">Converted to BT.2020 (fallback for this video)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),bt2020) + String.IsEqual(Window(Home).Property(hades.dv.composer),reshaping)">Converted to BT.2020 (libplacebo's reshaping)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),bt2020)">Converted to BT.2020</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">Low-Latency, a Hades képezi le (4:2:2, 12 bit)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source) + String.IsEqual(Window(Home).Property(hades.dv.signal),ipt)">Ahogy a licencelt lejátszók küldik (IPT)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source) + String.IsEqual(Window(Home).Property(hades.dv.signal),ictcp)">Összeállítva (ICtCp)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),source)">Összeállítva (YCbCr)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),fallback) + String.IsEqual(Window(Home).Property(hades.dv.composer),reshaping)">BT.2020-ra átalakítva (a libplacebo újraformázása)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),fallback)">BT.2020-ra átalakítva (tartalék ehhez a videóhoz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),bt2020) + String.IsEqual(Window(Home).Property(hades.dv.composer),reshaping)">BT.2020-ra átalakítva (a libplacebo újraformázása)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.transport),bt2020)">BT.2020-ra átalakítva</value>
 	</variable>
 	<variable name="WndHadesHdrWhyVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noprop)">the connector has no HDR property</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noedid)">the display's identification could not be read</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),nostatic)">the display declares no HDR</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noeotf)">the display does not declare this kind of HDR</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noblob) | String.IsEqual(Window(Home).Property(hades.sum.arg),notqueued)">the graphics driver did not take the HDR metadata</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),setting)">HDR is turned off in the display settings</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noprop)">a csatlakozónak nincs HDR tulajdonsága</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noedid)">a kijelző azonosítóját nem sikerült kiolvasni</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),nostatic)">a kijelző nem jelez HDR-t</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noeotf)">a kijelző ezt a fajta HDR-t nem jelzi</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),noblob) | String.IsEqual(Window(Home).Property(hades.sum.arg),notqueued)">a grafikus illesztő nem fogadta el a HDR metaadatot</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.arg),setting)">a HDR ki van kapcsolva a kijelzőbeállításokban</value>
 	</variable>
 	<variable name="WndHadesInfoDVMenusVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),dv)">Yes: no change of picture mode</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),own)">Left for this video's format</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),sdr)">Not in use (kodi.log says why)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),dv)">Igen: nincs képmódváltás</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),own)">A videó formátumára hagyva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.menus),sdr)">Nincs használatban (a kodi.log megmondja, miért)</value>
 	</variable>
 	<variable name="WndHadesInfoDVStepVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.step)) + !String.IsEmpty(Window(Home).Property(hades.dv.guistep))">szint $INFO[Window(Home).Property(hades.dv.step)], $INFO[Window(Home).Property(hades.dv.guistep)] GUI-val</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.step),0) + !String.IsEmpty(Window(Home).Property(hades.dv.guiround))">none (faithful), simpler rounding under the GUI</value>
-		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.step)) + !String.IsEmpty(Window(Home).Property(hades.dv.guiround))">szint $INFO[Window(Home).Property(hades.dv.step)], simpler rounding under the GUI</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.step),0)">none (faithful)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.step),0) + !String.IsEmpty(Window(Home).Property(hades.dv.guiround))">nincs (hű), egyszerűbb kerekítés a GUI alatt</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.step)) + !String.IsEmpty(Window(Home).Property(hades.dv.guiround))">szint $INFO[Window(Home).Property(hades.dv.step)], egyszerűbb kerekítés a GUI alatt</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.step),0)">nincs (hű)</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.step))">szint $INFO[Window(Home).Property(hades.dv.step)]</value>
 	</variable>
 	<variable name="WndHadesInfoSampleVar">
@@ -188,115 +188,115 @@
 		<value>$INFO[Window(Home).Property(hades.audio.srcrate),, kHz]</value>
 	</variable>
 	<variable name="WndHadesOutAdaptVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),brighter)">Yes: brighter than the display$INFO[Window(Home).Property(hades.out.adaptpeaks), (, nits)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),always)">Yes: always (the setting)$INFO[Window(Home).Property(hades.out.adaptpeaks), (, nits)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),notbrighter)">No: not brighter than the display</value>
-		<value>No (kodi.log says why)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),brighter)">Igen: fényesebb a kijelzőnél$INFO[Window(Home).Property(hades.out.adaptpeaks), (, nits)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),always)">Igen: mindig (beállítva)$INFO[Window(Home).Property(hades.out.adaptpeaks), (, nits)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.adapt),notbrighter)">Nem: nem fényesebb a kijelzőnél</value>
+		<value>Nem (a kodi.log megmondja, miért)</value>
 	</variable>
 	<variable name="WndHadesOutCllVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.cll),none)">not given</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.cll),none)">nincs megadva</value>
 		<value>$INFO[Window(Home).Property(hades.out.cll)]</value>
 	</variable>
 	<variable name="WndHadesOutColorspaceVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.colorspace),Default)">default (by the mode)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.colorspace),Default)">alapértelmezett (a mód szerint)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.colorspace),BT2020_RGB)">BT.2020 RGB</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.colorspace),BT2020_YCC)">BT.2020 YCbCr</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.colorspace),DCI-P3_RGB_D65)">P3-D65 RGB</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.colorspace))">$INFO[Window(Home).Property(hades.out.colorspace)]</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesOutContentVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),cinema)">Cinema</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),game)">Game</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),graphics)">Computer graphics</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),photo)">Photo</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),none)">Not said</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),cinema)">Mozi</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),game)">Játék</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),graphics)">Számítógépes grafika</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),photo)">Fotó</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.content),none)">Nincs megadva</value>
 	</variable>
 	<variable name="WndHadesOutDepthVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),dv)">8 bits (12-bit DV inside)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link) + String.IsEqual(Window(Home).Property(hades.out.depthwhy),setting)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (8-bit RGB setting)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link) + String.IsEqual(Window(Home).Property(hades.out.depthwhy),link)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (all the link carries)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (as the driver says)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),reported)">$INFO[Window(Home).Property(hades.out.depth)] bits (as the driver says)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),fixed)">$INFO[Window(Home).Property(hades.out.depth)] bits (fixed)</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),upto)">up to $INFO[Window(Home).Property(hades.out.depth)] bits; the driver chooses</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),driver)">the driver chooses</value>
-		<value>not known</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),dv)">8 bit (benne 12 bites DV)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link) + String.IsEqual(Window(Home).Property(hades.out.depthwhy),setting)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (8 bites RGB beállítás)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link) + String.IsEqual(Window(Home).Property(hades.out.depthwhy),link)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (amennyit a kapcsolat visz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),link)">$INFO[Window(Home).Property(hades.out.depth)] bits, $INFO[Window(Home).Property(hades.out.linkformat)] (ahogy az illesztő mondja)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),reported)">$INFO[Window(Home).Property(hades.out.depth)] bits (ahogy az illesztő mondja)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),fixed)">$INFO[Window(Home).Property(hades.out.depth)] bits (rögzített)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),upto)">legfeljebb $INFO[Window(Home).Property(hades.out.depth)] bits; az illesztő választ</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.depthkind),driver)">az illesztő választ</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesOutDisplayVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.display))">$INFO[Window(Home).Property(hades.out.display)]</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesOutFbVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.plane),video)">video on a plane of its own</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.fbdepth),16f)">RGB 16-bit float$INFO[Window(Home).Property(hades.out.fbformat), (,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.plane),video)">a videó saját síkon</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.fbdepth),16f)">RGB 16 bites lebegőpontos$INFO[Window(Home).Property(hades.out.fbformat), (,)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.fbdepth))">RGB $INFO[Window(Home).Property(hades.out.fbdepth)] bits$INFO[Window(Home).Property(hades.out.fbformat), (,)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.fbformat))">$INFO[Window(Home).Property(hades.out.fbformat)]</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesOutHdr10PlusCurveVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.hdr10plus.anchors),0)">none</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.hdr10plus.anchors),0)">nincs</value>
 		<value>$INFO[Window(Home).Property(hades.out.hdr10plus.anchors)] horgonypontok</value>
 	</variable>
 	<variable name="WndHadesOutHdr10PlusTargetVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.hdr10plus.target),0)">not given</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.hdr10plus.target),0)">nincs megadva</value>
 		<value>$INFO[Window(Home).Property(hades.out.hdr10plus.target),, nits]</value>
 	</variable>
 	<variable name="WndHadesOutMasteringVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.mastering))">$INFO[Window(Home).Property(hades.out.mastering),, nits]</value>
-		<value>not given</value>
+		<value>nincs megadva</value>
 	</variable>
 	<variable name="WndHadesOutPrimariesVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.primaries),p3)">P3-D65</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.primaries),bt2020)">BT.2020</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.primaries),bt709)">BT.709</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.primaries),other)">other</value>
-		<value>not given</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.primaries),other)">egyéb</value>
+		<value>nincs megadva</value>
 	</variable>
 	<variable name="WndHadesOutStereo3DByVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),chosen)">, chosen for 3D</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notpossible)">, 3D choice not possible</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notchecked)">, HDR in 3D not checked yet</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),hdrworks)">, checked: HDR works</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),nohdr)">, checked: no HDR in 3D</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),chosen)">, 3D-hez választva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notpossible)">, 3D-s választás nem lehetséges</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notchecked)">, a HDR 3D-ben még nincs ellenőrizve</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),hdrworks)">, ellenőrizve: a HDR működik</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),nohdr)">, ellenőrizve: nincs HDR 3D-ben</value>
 	</variable>
 	<variable name="WndHadesOutStereo3DVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),hdr10)">HDR10$VAR[WndHadesOutStereo3DByVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),hlg)">HLG$VAR[WndHadesOutStereo3DByVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdr709)">SDR in BT.709$VAR[WndHadesOutStereo3DByVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdr2020)">SDR in BT.2020$VAR[WndHadesOutStereo3DByVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdrp3)">SDR in DCI-P3$VAR[WndHadesOutStereo3DByVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdr709)">SDR BT.709-ben$VAR[WndHadesOutStereo3DByVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdr2020)">SDR BT.2020-ban$VAR[WndHadesOutStereo3DByVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),sdrp3)">SDR DCI-P3-ban$VAR[WndHadesOutStereo3DByVar]</value>
 	</variable>
 	<variable name="WndHadesOutStereoVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D frame packing, $VAR[WndHadesOutStereo3DVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D top-and-bottom, $VAR[WndHadesOutStereo3DVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D side-by-side, $VAR[WndHadesOutStereo3DVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D képcsomagolás (frame packing), $VAR[WndHadesOutStereo3DVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D egymás alatt (top-and-bottom), $VAR[WndHadesOutStereo3DVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D egymás mellett (side-by-side), $VAR[WndHadesOutStereo3DVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),other) + !String.IsEmpty(Window(Home).Property(hades.out.stereo3d))">3D, $VAR[WndHadesOutStereo3DVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp)">Frame packing: both eyes in full</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab)">Top-and-bottom (half), told to the display</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs)">Side-by-side (half), told to the display</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),overunder)">Over/under, not told: set the display to 3D by hand</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sidebyside)">Side by side, not told: set the display to 3D by hand</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),other)">Another 3D layout</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp)">Frame packing: mindkét szem teljes felbontásban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab)">Egymás alatt (fél felbontás), jelezve a kijelzőnek</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs)">Egymás mellett (fél felbontás), jelezve a kijelzőnek</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),overunder)">Egymás alatt, jelzés nélkül: állítsd a kijelzőt kézzel 3D-re</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sidebyside)">Egymás mellett, jelzés nélkül: állítsd a kijelzőt kézzel 3D-re</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),other)">Másik 3D elrendezés</value>
 	</variable>
 	<variable name="WndHadesOvAudioOutVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm)">PCM, decoded</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.path),pcm)">PCM, dekódolva</value>
 		<value>$VAR[WndHadesAudioOutVar]</value>
 	</variable>
 	<variable name="WndHadesOvDVOutVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),native) + String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">Native, Low-Latency</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),native)">Native, TV-led</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),hdr10) + String.IsEqual(Window(Home).Property(hades.dv.hdr10plus),yes)">Rebuilt, sent as HDR10+</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),hdr10)">Rebuilt, sent as HDR10</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),sdr)">Rebuilt, mapped to SDR</value>
-		<value>Ordinary, no Dolby Vision</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),native) + String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">Natív, kis késleltetésű</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),native)">Natív, TV-led</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),hdr10) + String.IsEqual(Window(Home).Property(hades.dv.hdr10plus),yes)">Újraépítve, HDR10+-ként elküldve</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),hdr10)">Újraépítve, HDR10-ként elküldve</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.state),sdr)">Újraépítve, SDR-re leképezve</value>
+		<value>Hagyományos, nincs Dolby Vision</value>
 	</variable>
 	<variable name="WndHadesOvDecodingVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),hw)">Graphics card$INFO[Window(Home).Property(hades.video.api), (,)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),sw)">Processor (software)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),hw)">Grafikus kártya$INFO[Window(Home).Property(hades.video.api), (,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),sw)">Processzor (szoftveres)</value>
 	</variable>
 	<variable name="WndHadesOvEotfVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">none (Dolby Vision)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">nincs (Dolby Vision)</value>
 		<value condition="String.IsEqual(Player.Process(videooutputeotf),pq)">PQ</value>
 		<value condition="String.IsEqual(Player.Process(videooutputeotf),hlg)">HLG</value>
 		<value condition="String.IsEqual(Player.Process(videooutputeotf),sdr)">SDR</value>
@@ -312,26 +312,26 @@
 		<value>$VAR[WndHadesAudioCodecVar]</value>
 	</variable>
 	<variable name="WndHadesOvLinkVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">DV 12-bit in RGB 8-bit</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">DV 12 bit 8 bites RGB-ben</value>
 		<value>$VAR[WndHadesOutDepthVar]</value>
 	</variable>
 	<variable name="WndHadesOvModeVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D frame packing</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D top-and-bottom</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D side-by-side</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),overunder) | String.IsEqual(Window(Home).Property(hades.out.stereo),sidebyside)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D not told</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),fp)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D képcsomagolás (frame packing)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),tab)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D egymás alatt (top-and-bottom)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),sbs)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D egymás mellett (side-by-side)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),overunder) | String.IsEqual(Window(Home).Property(hades.out.stereo),sidebyside)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D jelzés nélkül</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo),other)">$INFO[Window(Home).Property(hades.out.mode3d)], 3D</value>
 		<value>$INFO[Window(Home).Property(hades.out.mode)]</value>
 	</variable>
 	<variable name="WndHadesOvSignalVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv) + String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">DV Low-Latency</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv) + String.IsEqual(Window(Home).Property(hades.dv.transport),lowlatency)">DV, kis késleltetésű</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">Dolby Vision (TV-led)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),hdr10plus)">HDR10+ (PQ)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),pq)">HDR10 (PQ)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),hlg)">HLG</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),hdrgamma)">HDR (gamma)</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),sdr)">SDR</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesOvSignallingVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.vsif),hdmi14b)">HDMI 1.4b vendor InfoFrame</value>
@@ -339,10 +339,10 @@
 	</variable>
 	<variable name="WndHadesOvSubtitlesVar">
 		<value condition="VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled">$INFO[VideoPlayer.SubtitlesLanguage]$VAR[WndHadesSubtitleCodecVar, (,)]</value>
-		<value>Off</value>
+		<value>Ki</value>
 	</variable>
 	<variable name="WndHadesPathHealthVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.shown))">Last 10 s: $INFO[Window(Home).Property(hades.dv.shown),, frames]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , failed]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.dv.shown))">Utolsó 10 mp: $INFO[Window(Home).Property(hades.dv.shown),, képkocka]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , sikertelen]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.play.dropped))">Dobott $INFO[Window(Home).Property(hades.play.dropped)], Kihagyott $INFO[Window(Home).Property(hades.play.skipped)]</value>
 	</variable>
 	<variable name="WndHadesPathPictureVar">
@@ -358,63 +358,63 @@
 		<value>SDR</value>
 	</variable>
 	<variable name="WndHadesSrcCllVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.src.cll),none)">not given</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.src.cll),none)">nincs megadva</value>
 		<value>$INFO[Window(Home).Property(hades.src.cll)]</value>
 	</variable>
 	<variable name="WndHadesStripGpuVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.sys.gpu))">$INFO[Window(Home).Property(hades.sys.gpu),,%]$INFO[Window(Home).Property(hades.sys.gputemp), · ,]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.sys.gputemp))">$INFO[Window(Home).Property(hades.sys.gputemp)]</value>
-		<value>not known</value>
+		<value>nem ismert</value>
 	</variable>
 	<variable name="WndHadesSubtitleCodecVar">
 		<value condition="Window.IsActive(fullscreenvideo)">$MAP[WndHadesCodecMap, VideoPlayer.SubtitleCodec]</value>
 	</variable>
 	<variable name="WndHadesSumHeadVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv)">Dolby Vision, as your TV expects it</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv_hdr10)">HDR10, not Dolby Vision</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv_sdr)">SDR, not Dolby Vision</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr10plus)">HDR10+, as the film was made</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr10)">HDR10, as the film was made</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hlg)">HLG, as the film was made</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),sdr)">SDR, as the film was made</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr_lost)">SDR: the TV is not told this video is HDR</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr_as_sdr)">SDR, as chosen in the display settings</value>
-		<value>Player information</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv)">Dolby Vision, ahogy a kijelződ várja</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv_hdr10)">HDR10, nem Dolby Vision</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),dv_sdr)">SDR, nem Dolby Vision</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr10plus)">HDR10+, ahogy a film készült</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr10)">HDR10, ahogy a film készült</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hlg)">HLG, ahogy a film készült</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),sdr)">SDR, ahogy a film készült</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr_lost)">SDR: a kijelző nem kap jelzést, hogy ez a videó HDR</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.head),hdr_as_sdr)">SDR, a kijelzőbeállítások szerint</value>
+		<value>Lejátszóinformáció</value>
 	</variable>
 	<variable name="WndHadesSumSubVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),ok)">Everything is working as intended.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),dv_not_native)">Not sent as Dolby Vision: $VAR[WndHadesDVReasonVar].</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_to_sdr)">Dolby Vision is mapped to SDR for this display.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_not_sent)">The TV is not told this video is HDR: $VAR[WndHadesHdrWhyVar].</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_failed)">$INFO[Window(Home).Property(hades.sum.arg)] frames could not be shown in the last 10 seconds.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_dropped)">$INFO[Window(Home).Property(hades.sum.arg)] frames were dropped by the player in the last 30 seconds of steady playback.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_skipped)">$INFO[Window(Home).Property(hades.sum.arg)] frames came too late for the display in the last 30 seconds of steady playback.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_gpu)">Frames come too late for the display: the graphics are busy, in use at $INFO[Window(Home).Property(hades.sum.arg)] %.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_buffering)">Frames were lost while the video was buffering: the network or the source cannot keep up.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),step_down)">Your graphics card cannot draw every frame at full precision: the drawing is simplified (see System).</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),fel_resync)">The enhancement layer is catching up after a seek; the base picture is shown meanwhile.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),rate_mismatch)">Motion may be uneven: the display refresh rate does not match the video.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),audio_decoded)">Sound is decoded to PCM: $VAR[WndHadesAudioWhyVar].</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),unknown_output)">What the TV receives could not be read from the graphics driver.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),slow)">Back to 2D: the processor did not decode both views of this 3D video in time.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),dvipt)">Dolby Vision 3D (profile 20): one view is shown in 2D, rebuilt with its metadata.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_as_sdr)">This HDR video is sent as SDR, as "Play HDR videos as SDR" asks.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),ok)">Minden a tervezett módon működik.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),dv_not_native)">Nem Dolby Visionként küldve: $VAR[WndHadesDVReasonVar].</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_to_sdr)">A Dolby Vision SDR-re van leképezve ennél a kijelzőnél.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_not_sent)">A kijelző nem kap jelzést, hogy ez a videó HDR: $VAR[WndHadesHdrWhyVar].</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_failed)">$INFO[Window(Home).Property(hades.sum.arg)] képkockát nem sikerült megjeleníteni az utolsó 10 másodpercben.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_dropped)">$INFO[Window(Home).Property(hades.sum.arg)] képkockát dobott el a lejátszó az elmúlt 30 másodpercben, egyenletes lejátszás mellett.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_skipped)">$INFO[Window(Home).Property(hades.sum.arg)] képkocka késett el a kijelzőhöz képest az elmúlt 30 másodpercben, egyenletes lejátszás mellett.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_gpu)">A képkockák későn érnek a kijelzőre: a grafika foglalt, használatban van: $INFO[Window(Home).Property(hades.sum.arg)] %.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),frames_buffering)">Képkockák vesztek el pufferelés közben: a hálózat vagy a forrás nem bírja a tempót.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),step_down)">A grafikus kártyád nem tud minden képkockát teljes pontossággal kirajzolni: a rajzolás egyszerűsített (lásd: Rendszer).</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),fel_resync)">A kiegészítő réteg keresés után felzárkózik; addig az alapkép látszik.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),rate_mismatch)">A mozgás egyenetlen lehet: a kijelző képfrissítési frekvenciája nem egyezik a videóéval.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),audio_decoded)">A hang PCM-re van dekódolva: $VAR[WndHadesAudioWhyVar].</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),unknown_output)">Azt, hogy a kijelző mit kap, nem sikerült kiolvasni a grafikus illesztőből.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),slow)">Vissza 2D-re: a processzor nem tudta időben dekódolni a 3D videó mindkét nézetét.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),dvipt)">Dolby Vision 3D (20-as profil): az egyik nézet 2D-ben látszik, a metaadataival újraépítve.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_as_sdr)">Ez a HDR videó SDR-ként megy ki, ahogy a "HDR videók lejátszása SDR-ként" kéri.</value>
 	</variable>
 	<variable name="WndHadesSumTodoVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),tv)">Check this TV input: its game mode and its Dolby Vision setting.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),mode)">Set the display mode to 3840x2160 at 24 to 60 Hz in the display settings.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),choice)">Choose the output for this video again with the button below, or in the player settings.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),rate)">Turn on Adjust display refresh rate in the player settings.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdr)">Check the HDR setting of this TV input and the display settings of Hades.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),sync)">Turn off Sync playback to display to send the sound untouched.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),passthrough)">Turn on Allow passthrough in the audio settings to send the sound untouched.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),codec)">Turn on passthrough for this format in the audio settings to send the sound untouched.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),converteron)">Set Dolby Vision through a display converter back to Automatic in the display settings.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),convertertry)">To try it, set Dolby Vision through a display converter to On in the display settings, and back to Automatic if the picture goes.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),port)">Connect the TV to an HDMI output that the graphics card drives itself, without a DisplayPort or USB-C adapter.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),system)">See the System page.</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdrassdr)">To send it as HDR, set "Play HDR videos as SDR" to Never (Settings &gt; System &gt; Display, Expert level).</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),ratemode)">Adjust display refresh rate is on, but the display has no mode at the rate of this video (or the whitelist of the display settings leaves it out).</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),tv)">Ellenőrizd ezt a kijelzőbemenetet: a játékmódját és a Dolby Vision beállítását.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),mode)">Állítsd a kijelzőmódot 3840x2160-ra, 24–60 Hz-re a kijelzőbeállításokban.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),choice)">Válaszd ki újra a kimenetet ehhez a videóhoz az alábbi gombbal, vagy a lejátszóbeállításokban.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),rate)">Kapcsold be a "Kijelző képfrissítési frekvenciájának igazítása" beállítást a lejátszóbeállításokban.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdr)">Ellenőrizd e kijelzőbemenet HDR beállítását és a Hades kijelzőbeállításait.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),sync)">Kapcsold ki a lejátszás szinkronizálását a kijelzőhöz, hogy a hang érintetlenül menjen ki.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),passthrough)">Kapcsold be a hangtovábbítás engedélyezését a hangbeállításokban, hogy a hang érintetlenül menjen ki.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),codec)">Kapcsold be ennek a formátumnak a továbbítását a hangbeállításokban, hogy a hang érintetlenül menjen ki.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),converteron)">Állítsd vissza a "Dolby Vision kijelzőátalakítón keresztül" beállítást Automatikusra a kijelzőbeállításokban.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),convertertry)">A kipróbáláshoz állítsd a "Dolby Vision kijelzőátalakítón keresztül" beállítást Be értékre a kijelzőbeállításokban, és vissza Automatikusra, ha a kép elmegy.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),port)">Csatlakoztasd a kijelzőt egy olyan HDMI kimenetre, amelyet a grafikus kártya maga hajt, DisplayPort vagy USB-C adapter nélkül.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),system)">Lásd a Rendszer oldalt.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdrassdr)">HDR-ként küldéséhez állítsd a "HDR videók lejátszása SDR-ként" beállítást Soha értékre (Beállítások &gt; Rendszer &gt; Kijelző, Szakértő szint).</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),ratemode)">A "Kijelző képfrissítési frekvenciájának igazítása" be van kapcsolva, de a kijelzőnek nincs módja ennek a videónak a frekvenciáján (vagy a kijelzőbeállítások fehérlistája kihagyja).</value>
 	</variable>
 	<variable name="WndHadesSysFormatVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.pixelformat),rgb)">RGB</value>
@@ -422,63 +422,63 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.pixelformat),422)">YCbCr 4:2:2</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.pixelformat),420)">YCbCr 4:2:0</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.out.linkformat))">$INFO[Window(Home).Property(hades.out.linkformat)]</value>
-		<value>not said by the driver</value>
+		<value>az illesztő nem mondja meg</value>
 	</variable>
 	<variable name="WndHadesSysLinkVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),frl) + !String.IsEmpty(Window(Home).Property(hades.out.frllanes))">FRL, $INFO[Window(Home).Property(hades.out.frllanes)] lanes at $INFO[Window(Home).Property(hades.out.frlgbps),, Gb/s]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),frl) + !String.IsEmpty(Window(Home).Property(hades.out.frllanes))">FRL, $INFO[Window(Home).Property(hades.out.frllanes)] sáv, sebesség: $INFO[Window(Home).Property(hades.out.frlgbps),, Gb/s]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),frl)">FRL</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),tmdsscrambled)">TMDS, scramblerezett$INFO[Window(Home).Property(hades.out.tmdsmhz),$COMMA , MHz]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),tmds)">TMDS$INFO[Window(Home).Property(hades.out.tmdsmhz),$COMMA , MHz]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.link),dp)">DisplayPort</value>
-		<value>not said by the driver</value>
+		<value>az illesztő nem mondja meg</value>
 	</variable>
 	<variable name="WndHadesSysVrrVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),follows)">On: the refresh follows the video</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),follows)">Be: a frissítés követi a videót</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),repeats)">$INFO[Window(Home).Property(hades.out.vrrtext)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),checking)">Checking</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),samerate)">On, at the mode's own rate</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),fixed)">Not on: the mode follows the video</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),nomode)">Not on: no mode at the video's rate</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),dv)">Off: Dolby Vision changes the mode</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),on)">On</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),setting)">Off, as set in System &gt; Display</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),held)">Held off for HDR10+</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),offered)">Offered by the TV, not used</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),none)">Not offered by the TV</value>
-		<value>not said by the driver</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),checking)">Ellenőrzés</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),samerate)">Be, a mód saját frekvenciáján</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),fixed)">Nincs bekapcsolva: a mód követi a videót</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),nomode)">Nincs bekapcsolva: nincs mód a videó frekvenciáján</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),dv)">Ki: a Dolby Vision módot vált</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),on)">Be</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),setting)">Ki, a Rendszer &gt; Kijelző beállítás szerint</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),held)">HDR10+ miatt visszatartva</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),offered)">Támogatott, nincs használatban</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.vrr),none)">A kijelző nem kínálja</value>
+		<value>az illesztő nem mondja meg</value>
 	</variable>
 	<variable name="WndHadesTvAudioVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.audio),none)">Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.audio),none)">Nincs deklarálva</value>
 		<value>$INFO[Window(Home).Property(hades.tv.audio)]</value>
 	</variable>
 	<variable name="WndHadesTvDvVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),stdll)">Standard and Low-Latency$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),stdll)">Standard és Low-Latency$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),std)">Standard$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),ll)">Low-Latency only$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),old)">HDMI 1.4b signalling$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),unread)">A block that Hades cannot use</value>
-		<value>Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),ll)">Csak Low-Latency$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),old)">HDMI 1.4b jelzés$INFO[Window(Home).Property(hades.tv.dvversion), (v,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.dv),unread)">A Hades által nem használható blokk</value>
+		<value>Nincs támogatva</value>
 	</variable>
 	<variable name="WndHadesTvFeaturesVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.features),none)">Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.features),none)">Nincs deklarálva</value>
 		<value>$INFO[Window(Home).Property(hades.tv.features)]</value>
 	</variable>
 	<variable name="WndHadesTvFrlVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.frl),frl) + !String.IsEmpty(Window(Home).Property(hades.tv.frllanes))">$INFO[Window(Home).Property(hades.tv.frllanes)] lanes at $INFO[Window(Home).Property(hades.tv.frlgbps),, Gb/s]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.frl),frl) + !String.IsEmpty(Window(Home).Property(hades.tv.frllanes))">$INFO[Window(Home).Property(hades.tv.frllanes)] sáv, sebesség: $INFO[Window(Home).Property(hades.tv.frlgbps),, Gb/s]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.tv.frl),frl)">FRL</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.frl),tmds)">TMDS only$INFO[Window(Home).Property(hades.tv.tmdsmhz),$COMMA up to , MHz]</value>
-		<value>Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.frl),tmds)">Csak TMDS$INFO[Window(Home).Property(hades.tv.tmdsmhz),$COMMA legfeljebb , MHz]</value>
+		<value>Nincs támogatva</value>
 	</variable>
 	<variable name="WndHadesTvHdrVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.hdr),none)">Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.hdr),none)">Nincs támogatva</value>
 		<value>$INFO[Window(Home).Property(hades.tv.hdr)]</value>
 	</variable>
 	<variable name="WndHadesTvPathVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.path),through)">Via sound bar/receiver$INFO[Window(Home).Property(hades.tv.address), (,)]</value>
-		<value>Direct$INFO[Window(Home).Property(hades.tv.address), (,)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.path),through)">Hangsugárzón/erősítőn át$INFO[Window(Home).Property(hades.tv.address), (,)]</value>
+		<value>Közvetlen$INFO[Window(Home).Property(hades.tv.address), (,)]</value>
 	</variable>
 	<variable name="WndHadesTvVrrVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.tv.vrrmin),none)">Not declared</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.tv.vrrmin),none)">Nincs támogatva</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.tv.vrrmax))">$INFO[Window(Home).Property(hades.tv.vrrmin)] – $INFO[Window(Home).Property(hades.tv.vrrmax),, Hz]</value>
 		<value>min. $INFO[Window(Home).Property(hades.tv.vrrmin),, Hz]</value>
 	</variable>
@@ -606,20 +606,20 @@
 		<entry key="hlg">HLG</entry>
 	</map>
 	<variable name="WndHadesAudioSentVar">
-		<value>$INFO[Window(Home).Property(hades.audio.sent)]$INFO[Window(Home).Property(hades.audio.fold),; ,]$INFO[Window(Home).Property(hades.audio.folddrop),; , left out]</value>
+		<value>$INFO[Window(Home).Property(hades.audio.sent)]$INFO[Window(Home).Property(hades.audio.fold),; ,]$INFO[Window(Home).Property(hades.audio.folddrop),; , kihagyva]</value>
 	</variable>
 	<variable name="WndHadesAudioDeclVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">$INFO[Window(Home).Property(hades.audio.decl)]$INFO[Window(Home).Property(hades.audio.declby), (,)]$VAR[WndHadesAudioObjectsSaidVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),none)">none: its EDID declares no speakers$VAR[WndHadesAudioObjectsSaidVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),other)">not read: the sound goes to another output$VAR[WndHadesAudioObjectsSaidVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),otherdisplay)">not read: the sound goes to another display$VAR[WndHadesAudioObjectsSaidVar]</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),notknown)">not known yet$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),none)">nincs: az EDID-je nem jelez hangszórót$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),other)">nincs beolvasva: a hang másik kimenetre megy$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),otherdisplay)">nincs beolvasva: a hang másik kijelzőre megy$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),notknown)">még nem ismert$VAR[WndHadesAudioObjectsSaidVar]</value>
 	</variable>
 	<variable name="WndHadesAudioObjectsSaidVar">
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),yes)">; the receiver renders the objects there, heights included</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),noheights)">; the receiver renders the objects; it declares no heights</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notdeclared)">; the receiver does not declare the objects: the bed alone</value>
-		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notknown)">; objects: if the receiver decodes them</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),yes)">; a vevő itt rendereli az objektumokat, a magassági csatornákat is</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),noheights)">; a vevő rendereli az objektumokat; magassági csatornát nem jelez</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notdeclared)">; a vevő nem jelzi az objektumokat: csak az alap</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notknown)">; objektumok: ha a vevő dekódolja őket</value>
 	</variable>
 	<include name="WndHadesLevelCell">
 		<param name="left">0</param>

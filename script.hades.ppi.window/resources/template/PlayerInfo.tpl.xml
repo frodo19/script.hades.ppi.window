@@ -97,7 +97,7 @@
 				<aligny>center</aligny>
 				<font>font37</font>
 				<textcolor>@@t_main@@</textcolor>
-				<label>Player information</label>
+				<label>Lejátszóinformáció</label>
 				<visible>String.IsEmpty(Window(Home).Property(hades.sum.state))</visible>
 				<align>left</align>
 				<disabledcolor>40FFFFFF</disabledcolor>
@@ -161,7 +161,7 @@
 				<aligny>center</aligny>
 				<font>font10</font>
 				<textcolor>@@t_label@@</textcolor>
-				<label>+ $INFO[Window(Home).Property(hades.sum.more)] more notes: see the pages</label>
+				<label>+ $INFO[Window(Home).Property(hades.sum.more)] további megjegyzések: lásd az oldalakat</label>
 				<visible>String.IsEmpty(Window(Home).Property(hades.sum.todo)) + String.IsEmpty(Window(Home).Property(hades.pic.changed)) + !String.IsEmpty(Window(Home).Property(hades.sum.more)) + !String.IsEqual(Window(Home).Property(hades.sum.more),0)</visible>
 				<align>left</align>
 				<disabledcolor>40FFFFFF</disabledcolor>
@@ -177,7 +177,7 @@
 				<aligny>center</aligny>
 				<font>font10</font>
 				<textcolor>@@t_accent@@</textcolor>
-				<label>Your settings change the picture from the film: $INFO[Window(Home).Property(hades.pic.changed)]</label>
+				<label>A beállításaid megváltoztatják a filmhez képest a képet: $INFO[Window(Home).Property(hades.pic.changed)]</label>
 				<visible>String.IsEmpty(Window(Home).Property(hades.sum.todo)) + !String.IsEmpty(Window(Home).Property(hades.pic.changed))</visible>
 				<align>left</align>
 				<disabledcolor>40FFFFFF</disabledcolor>
@@ -221,7 +221,7 @@
 						<aligny>center</aligny>
 						<font>font20_title</font>
 						<textcolor>@@t_section@@</textcolor>
-						<label>[UPPERCASE]The film[/UPPERCASE]</label>
+						<label>[UPPERCASE]A film[/UPPERCASE]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -373,7 +373,7 @@
 						<aligny>center</aligny>
 						<font>font20_title</font>
 						<textcolor>@@t_section@@</textcolor>
-						<label>[UPPERCASE]Your TV[/UPPERCASE]</label>
+						<label>[UPPERCASE]A kijelződ[/UPPERCASE]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -477,7 +477,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Picture area</label>
+								<label>Képterület</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -528,7 +528,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Colour</label>
+									<label>Szín</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -580,7 +580,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Source display</label>
+								<label>Forrás</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -623,7 +623,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Mastering display</label>
+								<label>Mastering kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -666,7 +666,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sound</label>
+								<label>Hang</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -709,7 +709,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Language</label>
+								<label>Nyelv</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -762,7 +762,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Decoding</label>
+								<label>Dekódolás</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -813,7 +813,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Reason</label>
+									<label>Ok</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -853,7 +853,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Layers</label>
+								<label>Rétegek</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -904,7 +904,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Metadata sent</label>
+									<label>Elküldött metaadat</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -944,7 +944,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Graphics card</label>
+								<label>Grafikus kártya</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -960,7 +960,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_main@@</textcolor>
-								<label>$INFO[Window(Home).Property(hades.dv.gpu),, ms]$INFO[Window(Home).Property(hades.dv.headroom), (, ms spare)]</label>
+								<label>$INFO[Window(Home).Property(hades.dv.gpu),, ms]$INFO[Window(Home).Property(hades.dv.headroom), (, ms tartalék)]</label>
 								<scroll estuary="false">true</scroll>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -987,7 +987,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Subtitles</label>
+								<label>Feliratok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1083,7 +1083,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Signalling</label>
+								<label>Jelzés</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1126,7 +1126,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Mastering display</label>
+								<label>Mastering kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1212,7 +1212,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Display</label>
+								<label>Kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1263,7 +1263,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>TV offers</label>
+									<label>Támogatott</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -1303,7 +1303,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sound out</label>
+								<label>Hangkimenet</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1363,7 +1363,7 @@
 						<aligny>center</aligny>
 						<font>font20_title</font>
 						<textcolor>@@t_section@@</textcolor>
-						<label>[UPPERCASE]The film[/UPPERCASE]</label>
+						<label>[UPPERCASE]A film[/UPPERCASE]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -1515,7 +1515,7 @@
 						<aligny>center</aligny>
 						<font>font20_title</font>
 						<textcolor>@@t_section@@</textcolor>
-						<label>[UPPERCASE]Your TV[/UPPERCASE]</label>
+						<label>[UPPERCASE]A kijelződ[/UPPERCASE]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -1619,7 +1619,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Picture area</label>
+								<label>Képterület</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1670,7 +1670,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Colour</label>
+									<label>Szín</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -1722,7 +1722,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Source display</label>
+								<label>Forrás</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1765,7 +1765,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Mastering display</label>
+								<label>Mastering kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1808,7 +1808,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sound</label>
+								<label>Hang</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1851,7 +1851,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Language</label>
+								<label>Nyelv</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1904,7 +1904,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Decoding</label>
+								<label>Dekódolás</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -1955,7 +1955,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Reason</label>
+									<label>Ok</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -1995,7 +1995,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Layers</label>
+								<label>Rétegek</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2046,7 +2046,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Metadata sent</label>
+									<label>Elküldött metaadat</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -2094,7 +2094,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>Adapted to the TV</label>
+									<label>A kijelzőhöz igazítva</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -2134,7 +2134,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Graphics card</label>
+								<label>Grafikus kártya</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2150,7 +2150,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_main@@</textcolor>
-								<label>$INFO[Window(Home).Property(hades.dv.gpu),, ms]$INFO[Window(Home).Property(hades.dv.headroom), (, ms spare)]</label>
+								<label>$INFO[Window(Home).Property(hades.dv.gpu),, ms]$INFO[Window(Home).Property(hades.dv.headroom), (, ms tartalék)]</label>
 								<scroll estuary="false">true</scroll>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2177,7 +2177,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Subtitles</label>
+								<label>Feliratok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2273,7 +2273,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Signalling</label>
+								<label>Jelzés</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2316,7 +2316,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Mastering display</label>
+								<label>Mastering kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2402,7 +2402,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Display</label>
+								<label>Kijelző</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2453,7 +2453,7 @@
 									<aligny>center</aligny>
 									<font>font10</font>
 									<textcolor>@@t_label@@</textcolor>
-									<label>TV offers</label>
+									<label>Támogatott</label>
 									<align>left</align>
 									<disabledcolor>40FFFFFF</disabledcolor>
 									<selectedcolor>FFFFB70F</selectedcolor>
@@ -2493,7 +2493,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sound out</label>
+								<label>Hangkimenet</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2550,7 +2550,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]The film[/UPPERCASE]</label>
+							<label>[UPPERCASE]A film[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2586,7 +2586,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Format</label>
+								<label>Formát.</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2640,7 +2640,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Codec</label>
+							<label>Kodek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2683,7 +2683,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Picture</label>
+							<label>Kép</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2743,7 +2743,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Video resolution</label>
+							<label>Felbontás</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2786,7 +2786,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Aspect ratio</label>
+							<label>Képarány</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2829,7 +2829,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Video aspect</label>
+							<label>Videó képarány</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2872,7 +2872,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Picture area</label>
+							<label>Képterület</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -2940,7 +2940,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Colour</label>
+								<label>Szín</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -2993,7 +2993,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Matrix</label>
+							<label>Mátrix</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3053,7 +3053,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Live bitrate</label>
+							<label>Élő bitráta</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3096,7 +3096,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Video bitrate</label>
+							<label>Átlag bitráta</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3139,7 +3139,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Mastering display</label>
+							<label>Mastering kijelző</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3275,7 +3275,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>Yes</label>
+							<label>Igen</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3312,7 +3312,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Video output[/UPPERCASE]</label>
+							<label>[UPPERCASE]Videokimenet[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3340,7 +3340,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Signal</label>
+							<label>Jel</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3460,7 +3460,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Mode</label>
+							<label>Mód</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3569,7 +3569,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Display</label>
+							<label>Kijelző</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3612,7 +3612,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Colorimetry</label>
+							<label>Színmetria</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3655,7 +3655,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Content type</label>
+							<label>Tartalom típusa</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3698,7 +3698,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Transport</label>
+							<label>Átvitel</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3714,7 +3714,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>RGB 8-bit, DV 12-bit 4:2:2</label>
+							<label>RGB 8 bit, DV 12 bit 4:2:2</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3741,7 +3741,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Signalling</label>
+							<label>Jelzés</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3835,7 +3835,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Screen resolution</label>
+								<label>Képernyő felbontása</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -3884,7 +3884,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Active area zoom</label>
+								<label>Terület nagyítása</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -3947,7 +3947,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Decoding[/UPPERCASE]</label>
+							<label>[UPPERCASE]Dekódolás[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -3975,7 +3975,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Pixel format</label>
+							<label>Pixelformátum</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4018,7 +4018,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Decoder</label>
+							<label>Dekóder</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4061,7 +4061,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Deinterlacing</label>
+							<label>Soros. mentesítés</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4157,7 +4157,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]HDR metadata sent[/UPPERCASE]</label>
+							<label>[UPPERCASE]Elküldött HDR metaadat[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4185,7 +4185,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Mastering display</label>
+							<label>Mastering kijelző</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4245,7 +4245,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Primaries</label>
+							<label>Alapszínek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4348,7 +4348,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>HDR10+ average / 99 %</label>
+							<label>HDR10+ átlag / 99%</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4408,7 +4408,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>HDR10+ target display</label>
+							<label>HDR10+ célkijelző</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4468,7 +4468,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>HDR10+ curve</label>
+							<label>HDR10+ görbe</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -4536,7 +4536,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Adapted to the TV</label>
+								<label>A kijelzőhöz igazítva</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -4571,7 +4571,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>This video has no HDR or Dolby Vision metadata.</label>
+						<label>Nincs HDR/DV metaadat a videóban.</label>
 						<visible>String.IsEmpty(VideoPlayer.HdrType) + String.IsEmpty(Window(Home).Property(hades.out.cll))</visible>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
@@ -4585,7 +4585,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>No HDR metadata is sent to the display.</label>
+						<label>A kijelzőnek nem megy HDR metaadat.</label>
 						<visible>!String.IsEmpty(VideoPlayer.HdrType) + !String.IsEqual(Window(Home).Property(hades.out.signal),dv) + String.IsEmpty(Window(Home).Property(hades.out.cll))</visible>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
@@ -4599,7 +4599,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>Dolby Vision carries its own, in the picture.</label>
+						<label>A Dolby Vision a sajátját hordozza a képben.</label>
 						<visible>String.IsEqual(Window(Home).Property(hades.out.signal),dv) + String.IsEmpty(Window(Home).Property(hades.out.cll))</visible>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
@@ -4622,7 +4622,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>In the file</label>
+						<label>A fájlban</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -4637,7 +4637,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>Used by Hades</label>
+						<label>A Hades használja</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -4652,7 +4652,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>Sent to the TV</label>
+						<label>A kijelzőnek elküldve</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -6119,7 +6119,7 @@
 						<aligny>center</aligny>
 						<font>font20_title</font>
 						<textcolor>@@t_section@@</textcolor>
-						<label>[UPPERCASE]Dolby Vision metadata levels[/UPPERCASE]</label>
+						<label>[UPPERCASE]Dolby Vision metaadatszintek[/UPPERCASE]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -6142,7 +6142,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_value@@</textcolor>
-						<label>the level is there</label>
+						<label>a szint megvan</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -6173,22 +6173,28 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_value@@</textcolor>
-						<label>it is not</label>
+						<label>nincs meg</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
 						<scroll estuary="false">true</scroll>
 						<scrollspeed>40</scrollspeed>
 					</control>
-					<control type="textbox">
+					<control type="label">
 						<left>1190</left>
 						<top>220</top>
 						<width>526</width>
-						<height>80</height>
+						<height>62</height>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>Used: Hades reads the level's values and acts on them. Sent: what the TV receives.</label>
+						<wrapmultiline estuary="true">false</wrapmultiline>
+						<label>Használt: ez alapján dönt a Hades.
+Küldött: amit a kijelző kap.</label>
 						<align>left</align>
+						<disabledcolor>40FFFFFF</disabledcolor>
+						<selectedcolor>FFFFB70F</selectedcolor>
+						<scroll estuary="false">true</scroll>
+						<scrollspeed>40</scrollspeed>
 					</control>
 				</control>
 				<control type="label">
@@ -6199,7 +6205,7 @@
 					<aligny>center</aligny>
 					<font>font12</font>
 					<textcolor>@@t_label@@</textcolor>
-					<label>The levels are shown while a Dolby Vision video plays.</label>
+					<label>A szintek Dolby Vision videó lejátszása közben láthatók.</label>
 					<visible>String.IsEmpty(Window(Home).Property(hades.dv.lvhead))</visible>
 					<align>left</align>
 					<disabledcolor>40FFFFFF</disabledcolor>
@@ -6235,7 +6241,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Output</label>
+							<label>Kimenet</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6303,7 +6309,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Reason</label>
+								<label>Ok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -6344,7 +6350,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Profile</label>
+							<label>Profil</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6387,7 +6393,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Layers</label>
+							<label>Rétegek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6447,7 +6453,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>FEL residual</label>
+							<label>FEL-alkalmazva</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6490,7 +6496,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Composer bits</label>
+							<label>Egyesített bitek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6506,7 +6512,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Window(Home).Property(hades.dv.composebits)]$INFO[Window(Home).Property(hades.dv.composeout),$COMMA output: ,]</label>
+							<label>$INFO[Window(Home).Property(hades.dv.composebits)]$INFO[Window(Home).Property(hades.dv.composeout),$COMMA kimenet: ,]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6541,7 +6547,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Composer maps</label>
+								<label>Egyesítő módszer</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -6582,7 +6588,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>TV offers</label>
+							<label>Támogatott</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6633,7 +6639,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Transport</label>
+								<label>Átvitel</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -6674,7 +6680,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Signal</label>
+							<label>Jel</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6690,7 +6696,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>RGB 8 bits, no dithering (DV 4:2:2 12 bits)</label>
+							<label>RGB 8 bit, dithering nélkül (DV 4:2:2 12 bit)</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6717,7 +6723,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Signalling</label>
+							<label>Jelzés</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6768,7 +6774,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Scaling method</label>
+								<label>Skálázási módszer</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -6785,7 +6791,7 @@
 							<align>right</align>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>not used for Dolby Vision</label>
+							<label>Dolby Visionnél nem használatos</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -6819,7 +6825,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Source display</label>
+							<label>Forrás</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6879,7 +6885,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L1 min / avg / max</label>
+							<label>L1 min / átl / max</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -6999,7 +7005,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L2 trims</label>
+							<label>L2 trimek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7059,7 +7065,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L3 min / avg / max</label>
+							<label>L3 min / átl / max</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7119,7 +7125,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L4 anchor / power</label>
+							<label>L4 metaadat / erősség</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7179,7 +7185,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L5 in the RPU</label>
+							<label>L5 az RPU-ban</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7239,7 +7245,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L5 sent</label>
+							<label>L5 elküldve</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7299,7 +7305,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L5 sent (made)</label>
+							<label>L5 elküldve (készített)</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7359,7 +7365,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L5 sent (with the overlays)</label>
+							<label>L5 elküldve (átfedésekkel)</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7479,7 +7485,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L8 target ids</label>
+							<label>L8 célazonosítók</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7539,7 +7545,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L9 primaries</label>
+							<label>L9 alapszínek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7599,7 +7605,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Last 10 s</label>
+							<label>Utolsó 10 mp</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7615,7 +7621,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Window(Home).Property(hades.dv.shown),, frames]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , failed]</label>
+							<label>$INFO[Window(Home).Property(hades.dv.shown),, képkocka]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , sikertelen]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7642,7 +7648,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Longest gap</label>
+							<label>Leghosszabb szünet</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7685,7 +7691,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L1 changes</label>
+							<label>L1 változások</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7738,7 +7744,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L10 id: nits</label>
+							<label>L10 azonosító: nit</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7798,7 +7804,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L11 type / white / ref</label>
+							<label>L11 típus / fehér / ref</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7858,7 +7864,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L254 mode / version</label>
+							<label>L254 mód / verzió</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7918,7 +7924,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>L255 mode / version</label>
+							<label>L255 mód / verzió</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -7986,7 +7992,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>RPU blocks</label>
+								<label>RPU blokkok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -8035,7 +8041,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Blocks sent</label>
+								<label>Elküldött blokkok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -8089,7 +8095,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Not sent</label>
+							<label>Nem küldött</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8140,7 +8146,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Mapping sent</label>
+								<label>CM verzió</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -8194,7 +8200,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Trims</label>
+							<label>Trimek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8210,7 +8216,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>left out, as the settings say</label>
+							<label>kihagyva a beállítás szerint</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8253,7 +8259,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>L1 from HDR10+ statistics, no tone curve</label>
+							<label>L1 HDR10+ adatból, tónusgörbe nélkül</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8296,7 +8302,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>L1 from HDR10+, its tone curve applied</label>
+							<label>L1 HDR10+-ból, tónusgörbével</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8339,7 +8345,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>measured by Hades from the picture</label>
+							<label>a Hades mérte a képből</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8382,7 +8388,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>measured by Hades (no HDR10 output)</label>
+							<label>a Hades mérte (nincs HDR10 kimenet)</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8425,7 +8431,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>converted from HLG, measured by Hades</label>
+							<label>HLG-ből átalakítva, a Hades mérte</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8465,7 +8471,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Sound[/UPPERCASE]</label>
+							<label>[UPPERCASE]Hang[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8487,7 +8493,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>none</label>
+						<label>nincs</label>
 						<visible>String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(MusicPlayer.Codec)</visible>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
@@ -8507,7 +8513,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Codec</label>
+							<label>Kodek</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8567,7 +8573,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Channels</label>
+							<label>Csatornák</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8610,7 +8616,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Layout</label>
+							<label>Kiosztás</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8696,7 +8702,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Dialogue level</label>
+							<label>Párbeszédszint</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8712,7 +8718,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Player.Process(audiodialoguelevel)]$INFO[Player.Process(audiodialnormsent), (sent as ,)]</label>
+							<label>$INFO[Player.Process(audiodialoguelevel)]$INFO[Player.Process(audiodialnormsent), (küldve: ,)]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8739,7 +8745,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Dialogue gain</label>
+							<label>Párbeszéd-erősítés</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8755,7 +8761,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Player.Process(audiodialnormgain)]$INFO[Player.Process(audiodialnormsent), (sent as ,)]</label>
+							<label>$INFO[Player.Process(audiodialnormgain)]$INFO[Player.Process(audiodialnormsent), (küldve: ,)]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8782,7 +8788,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Sample format</label>
+							<label>Mintavétel</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8825,7 +8831,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Audio bitrate</label>
+							<label>Audió bitráta</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8868,7 +8874,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Language</label>
+							<label>Nyelv</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8911,7 +8917,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Subtitles</label>
+							<label>Feliratok</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -8954,7 +8960,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Subtitle decoder</label>
+							<label>Felirat dekóder</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9007,7 +9013,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Sound out[/UPPERCASE]</label>
+							<label>[UPPERCASE]Hangkimenet[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9035,7 +9041,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Audio decoder</label>
+							<label>Audió dekóder</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9086,7 +9092,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sent as</label>
+								<label>Küldés módja</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -9147,7 +9153,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Output signal</label>
+								<label>Kimeneti jel</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -9188,7 +9194,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Bitrate</label>
+							<label>Bitráta</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9239,7 +9245,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Live bitrate</label>
+								<label>Élő bitráta</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -9280,7 +9286,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Dialogue gain</label>
+							<label>Párbeszéd-erősítés</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9296,7 +9302,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>sent as</label>
+							<label>küldve:</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -9331,7 +9337,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Channels sent</label>
+								<label>Elküldött csatornák</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -9380,7 +9386,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Speakers</label>
+								<label>Hangszórók</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -9431,7 +9437,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Speakers[/UPPERCASE]</label>
+							<label>[UPPERCASE]Hangszórók[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12168,7 +12174,7 @@
 					<aligny>center</aligny>
 					<font>font10</font>
 					<textcolor>@@t_label@@</textcolor>
-					<label>not known</label>
+					<label>nem ismert</label>
 					<visible>String.IsEmpty(Window(Home).Property(hppi.spk))</visible>
 					<align>left</align>
 					<disabledcolor>40FFFFFF</disabledcolor>
@@ -12178,11 +12184,11 @@
 				</control>
 				<control type="grouplist"><left>1386</left><top>164</top><width>330</width><height>24</height><orientation>horizontal</orientation><align>right</align><itemgap>8</itemgap><usecontrolcoords>true</usecontrolcoords><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spk))</visible>
 <control type="group"><width>16</width><height>24</height><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture></control></control>
-<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Sound</label></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Hang</label></control>
 <control type="group"><width>16</width><height>24</height><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkobj))</visible><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture></control><control type="image"><left>2</left><top>6</top><width>12</width><height>12</height><texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture></control></control>
-<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Objects</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkobj))</visible></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Objektum</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkobj))</visible></control>
 <control type="group"><width>16</width><height>24</height><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkdecl))</visible><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture></control><control type="image"><left>2</left><top>6</top><width>12</width><height>12</height><texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture></control></control>
-<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Declared</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkdecl))</visible></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Jelzett</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkdecl))</visible></control>
 </control>
 				<control type="label">
 					<left>1186</left>
@@ -12192,7 +12198,7 @@
 					<aligny>center</aligny>
 					<font>font10</font>
 					<textcolor>@@t_label@@</textcolor>
-					<label>Layout assumed from its channel count</label>
+					<label>A kiosztás a csatornaszámból feltételezett</label>
 					<visible>!String.IsEmpty(Window(Home).Property(hppi.spk)) + String.IsEqual(Window(Home).Property(hades.audio.spkfrom),count)</visible>
 					<align>left</align>
 					<disabledcolor>40FFFFFF</disabledcolor>
@@ -12223,7 +12229,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Processing and system[/UPPERCASE]</label>
+							<label>[UPPERCASE]Feldolgozás és rendszer[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12251,7 +12257,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>GPU (10 s)</label>
+							<label>GPU (10 mp)</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12294,7 +12300,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Headroom</label>
+							<label>Saját</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12345,7 +12351,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>GPU by pass</label>
+								<label>GPU menetenként</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12398,7 +12404,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Drawing without GUI</label>
+							<label>Rajzolás GUI nélkül</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12441,7 +12447,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Frame ahead</label>
+							<label>Képkocka előre</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12492,7 +12498,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Fidelity step-down</label>
+								<label>Egyszerűsítés</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12553,7 +12559,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Menus in Dolby Vision</label>
+								<label>Menük DV-ben</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12602,7 +12608,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Rendering speed</label>
+								<label>Renderelési sebesség</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12643,7 +12649,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Memory</label>
+							<label>RAM</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12696,7 +12702,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Connection to the TV[/UPPERCASE]</label>
+							<label>[UPPERCASE]Kapcsolat a kijelzővel[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12724,7 +12730,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Connector</label>
+							<label>Csatlakozó</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -12775,7 +12781,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Link</label>
+								<label>Kapcsolat</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12824,7 +12830,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Output format</label>
+								<label>Kimeneti formátum</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12873,7 +12879,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Output depth</label>
+								<label>Kimeneti színmélység</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -12971,7 +12977,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Screen resolution</label>
+								<label>Képernyő felbontása</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13020,7 +13026,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Screen resolution</label>
+								<label>Képernyő felbontása</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13065,7 +13071,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Playback[/UPPERCASE]</label>
+							<label>[UPPERCASE]Lejátszás[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13093,7 +13099,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Last 10 s</label>
+							<label>Utolsó 10 mp</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13109,7 +13115,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Window(Home).Property(hades.dv.shown),, frames]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , failed]</label>
+							<label>$INFO[Window(Home).Property(hades.dv.shown),, képkocka]$INFO[Window(Home).Property(hades.dv.notshown),$COMMA , sikertelen]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13136,7 +13142,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Player cache</label>
+							<label>Lejátszó gyorsítótár</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13179,7 +13185,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Video buffer</label>
+							<label>Videópuffer</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13195,7 +13201,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Player.Process(videoqueuelevel),,%]$INFO[Player.Process(videoqueuedatalevel), (data ,%)]</label>
+							<label>$INFO[Player.Process(videoqueuelevel),,%]$INFO[Player.Process(videoqueuedatalevel), (adat ,%)]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13222,7 +13228,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_label@@</textcolor>
-							<label>Audio buffer</label>
+							<label>Hangpuffer</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13238,7 +13244,7 @@
 							<aligny>center</aligny>
 							<font>font10</font>
 							<textcolor>@@t_main@@</textcolor>
-							<label>$INFO[Player.Process(audioqueuelevel),,%]$INFO[Player.Process(audioqueuedatalevel), (data ,%)]</label>
+							<label>$INFO[Player.Process(audioqueuelevel),,%]$INFO[Player.Process(audioqueuedatalevel), (adat ,%)]</label>
 							<scroll estuary="false">true</scroll>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13275,7 +13281,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]What your TV declares[/UPPERCASE]</label>
+							<label>[UPPERCASE]Amit a Kijelző támogat[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13311,7 +13317,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>HDR formats</label>
+								<label>HDR-típusok</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13409,7 +13415,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>VRR range</label>
+								<label>VRR tartomány</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13458,7 +13464,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Maximum FRL</label>
+								<label>Max. FRL</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13507,7 +13513,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Also declares</label>
+								<label>Még jelzi</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13556,7 +13562,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Sound</label>
+								<label>Hang</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13605,7 +13611,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Connection</label>
+								<label>Kapcsolat</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13654,7 +13660,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Projector</label>
+								<label>Projektor</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -13701,7 +13707,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>Not read from the TV</label>
+						<label>A kijelzőből nem olvasható</label>
 						<visible>String.IsEmpty(Window(Home).Property(hades.tv.hdr))</visible>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
@@ -13725,7 +13731,7 @@
 							<aligny>center</aligny>
 							<font>font20_title</font>
 							<textcolor>@@t_section@@</textcolor>
-							<label>[UPPERCASE]Versions[/UPPERCASE]</label>
+							<label>[UPPERCASE]Verziók[/UPPERCASE]</label>
 							<align>left</align>
 							<disabledcolor>40FFFFFF</disabledcolor>
 							<selectedcolor>FFFFB70F</selectedcolor>
@@ -13859,7 +13865,7 @@
 								<aligny>center</aligny>
 								<font>font10</font>
 								<textcolor>@@t_label@@</textcolor>
-								<label>Graphics driver</label>
+								<label>Grafikus illesztő</label>
 								<align>left</align>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
@@ -14039,7 +14045,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Memory[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]RAM[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14074,7 +14080,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Dropped[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]Dobott[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14109,7 +14115,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Skipped[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]Kihagyott[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14225,7 +14231,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Memory[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]RAM[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14260,7 +14266,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Dropped[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]Dobott[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14295,7 +14301,7 @@
 						<aligny>center</aligny>
 						<font>font10</font>
 						<textcolor>@@t_label@@</textcolor>
-						<label>[B][UPPERCASE]Skipped[/UPPERCASE][/B]</label>
+						<label>[B][UPPERCASE]Kihagyott[/UPPERCASE][/B]</label>
 						<align>left</align>
 						<disabledcolor>40FFFFFF</disabledcolor>
 						<selectedcolor>FFFFB70F</selectedcolor>
@@ -14360,7 +14366,7 @@
 				<aligny>center</aligny>
 				<textcolor>@@t_main@@</textcolor>
 				<focusedcolor>FF0D0E12</focusedcolor>
-				<label>Output of this video</label>
+				<label>Aktuális videó kimenet</label>
 				<label2>$INFO[Player.Process(videodvoutputchoice)]</label2>
 				<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 				<texturenofocus@@sb@@ colordiffuse="@@bg_btn@@">@@stex@@</texturenofocus>
@@ -14414,8 +14420,8 @@
 				<aligny>center</aligny>
 				<textcolor>@@t_accent@@</textcolor>
 				<focusedcolor>FF0D0E12</focusedcolor>
-				<label>Picture settings changed: $INFO[Window(Home).Property(hades.pic.count)]</label>
-				<label2>Restore</label2>
+				<label>A képbeállítások megváltoztak: $INFO[Window(Home).Property(hades.pic.count)]</label>
+				<label2>Visszaállítás</label2>
 				<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 				<texturenofocus@@sb@@ colordiffuse="@@bg_btn@@">@@stex@@</texturenofocus>
 				<ondown condition="Control.IsVisible(5561)">5561</ondown>
@@ -14452,7 +14458,7 @@
 					<aligny>center</aligny>
 					<textcolor>@@t_value@@</textcolor>
 					<focusedcolor>FF0D0E12</focusedcolor>
-					<label>Overview</label>
+					<label>Áttekintés</label>
 					<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 					<texturenofocus />
 					<usealttexture>String.IsEqual(Window(Home).Property(HadesPlayerInfoPage),5556)</usealttexture>
@@ -14473,7 +14479,7 @@
 					<aligny>center</aligny>
 					<textcolor>@@t_value@@</textcolor>
 					<focusedcolor>FF0D0E12</focusedcolor>
-					<label>Video</label>
+					<label>Videó</label>
 					<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 					<texturenofocus />
 					<usealttexture>String.IsEqual(Window(Home).Property(HadesPlayerInfoPage),5557)</usealttexture>
@@ -14515,7 +14521,7 @@
 					<aligny>center</aligny>
 					<textcolor>@@t_value@@</textcolor>
 					<focusedcolor>FF0D0E12</focusedcolor>
-					<label>Sound</label>
+					<label>Hang</label>
 					<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 					<texturenofocus />
 					<usealttexture>String.IsEqual(Window(Home).Property(HadesPlayerInfoPage),5558)</usealttexture>
@@ -14534,7 +14540,7 @@
 					<aligny>center</aligny>
 					<textcolor>@@t_value@@</textcolor>
 					<focusedcolor>FF0D0E12</focusedcolor>
-					<label>System</label>
+					<label>Rendszer</label>
 					<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 					<texturenofocus />
 					<usealttexture>String.IsEqual(Window(Home).Property(HadesPlayerInfoPage),5559)</usealttexture>

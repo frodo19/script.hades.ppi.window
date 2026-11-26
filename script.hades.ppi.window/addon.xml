@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.hades.ppi.window" name="Hades PPI window" version="1.2.0" provider-name="CB1">
+<addon id="script.hades.ppi.window" name="Hades PPI window" version="1.2.2" provider-name="CB1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>

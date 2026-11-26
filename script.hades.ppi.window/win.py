@@ -82,7 +82,7 @@ def _speakers(home):
     # hppi.spk is hades.audio.spk; for Atmos / DTS:X (objects, passthrough) the four height channels are added, if the setting says so
     spk = home.getProperty('hades.audio.spk')
     codec = xbmc.getInfoLabel('VideoPlayer.AudioCodec')
-    if spk and xbmcaddon.Addon(look.ID).getSetting('atmos_heights') != 'false' \
+    if spk and xbmcaddon.Addon(look.ID).getSetting('atmos_heights') == 'true' \
             and (codec in ('truehd_atmos', 'eac3_ddp_atmos') or codec.startswith('dtshd_ma_x')):
         for ch in ('TFL', 'TFR', 'TBL', 'TBR'):
             if ';%s;' % ch not in spk:

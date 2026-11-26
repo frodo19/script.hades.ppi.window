@@ -15,7 +15,7 @@ Tested on LibreELEC Hades (Kodi 22) with the skin Arctic Fuse 3; not tested else
 - Shows the Hades pages (overview, video, Dolby Vision, sound, system) with Hades' own values and texts.
 - Bind a key to `RunScript(script.hades.ppi.window)` (for example with Keymap Editor). The same key or Back closes it.
 - Rounded panel, adjustable colours and opacity, separate colours for the speaker circles and the height channels.
-- Atmos / DTS:X: the four height channels can be shown (7.1.4 / 5.1.4 assumed); can be turned off.
+- Speakers: the layout comes from Hades; a legend tells which speakers get sound, which only render objects (receiver) and which are only declared. The four Atmos / DTS:X height channels (7.1.4 / 5.1.4 assumed) can be switched on in the settings.
 - Restore button for changed picture settings, and the upscaler / Dolby Vision output lists, as in Hades.
 - Optional web server for the TinyPPI Mobile app (off by default).
 

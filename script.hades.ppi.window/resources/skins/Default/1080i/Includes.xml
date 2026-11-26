@@ -117,6 +117,7 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),settings)">turned off in the settings</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),choice)">another output was chosen for this video</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),dualhdr)">its own HDR10+ was chosen over its Dolby Vision</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),stereo)">Dolby Vision is not sent in 3D: each view is rebuilt</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),failed)">failed; tried again with a later video</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),edid)">EDID not readable; tried with the next video</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.dv.reason),display)">this TV input has no Dolby Vision Standard</value>
@@ -255,6 +256,9 @@
 	<variable name="WndHadesOutStereo3DByVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),chosen)">, chosen for 3D</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notpossible)">, 3D choice not possible</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),notchecked)">, HDR in 3D not checked yet</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),hdrworks)">, checked: HDR works</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3dby),nohdr)">, checked: no HDR in 3D</value>
 	</variable>
 	<variable name="WndHadesOutStereo3DVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.stereo3d),hdr10)">HDR10$VAR[WndHadesOutStereo3DByVar]</value>
@@ -601,6 +605,22 @@
 		<entry key="hdr10">HDR10</entry>
 		<entry key="hlg">HLG</entry>
 	</map>
+	<variable name="WndHadesAudioSentVar">
+		<value>$INFO[Window(Home).Property(hades.audio.sent)]$INFO[Window(Home).Property(hades.audio.fold),; ,]$INFO[Window(Home).Property(hades.audio.folddrop),; , left out]</value>
+	</variable>
+	<variable name="WndHadesAudioDeclVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">$INFO[Window(Home).Property(hades.audio.decl)]$INFO[Window(Home).Property(hades.audio.declby), (,)]$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),none)">none: its EDID declares no speakers$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),other)">not read: the sound goes to another output$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),otherdisplay)">not read: the sound goes to another display$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),notknown)">not known yet$VAR[WndHadesAudioObjectsSaidVar]</value>
+	</variable>
+	<variable name="WndHadesAudioObjectsSaidVar">
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),yes)">; the receiver renders the objects there, heights included</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),noheights)">; the receiver renders the objects; it declares no heights</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notdeclared)">; the receiver does not declare the objects: the bed alone</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notknown)">; objects: if the receiver decodes them</value>
+	</variable>
 	<include name="WndHadesLevelCell">
 		<param name="left">0</param>
 		<param name="top">0</param>

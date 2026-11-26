@@ -9311,6 +9311,104 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
+					<control type="grouplist">
+						<width>530</width>
+						<height min="32" max="96">auto</height>
+						<orientation>vertical</orientation>
+						<itemgap>0</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<visible>!String.IsEmpty(Window(Home).Property(hades.audio.sent))</visible>
+						<control type="group">
+							<left>0</left>
+							<top>0</top>
+							<width>250</width>
+							<height>0</height>
+							<control type="label">
+								<left>0</left>
+								<top>0</top>
+								<width>250</width>
+								<height>32</height>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@t_label@@</textcolor>
+								<label>Channels sent</label>
+								<align>left</align>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="textbox">
+							<left>250</left>
+							<top>0</top>
+							<width>280</width>
+							<height min="32" max="96">auto</height>
+							<aligny>center</aligny>
+							<align>right</align>
+							<font>font10</font>
+							<textcolor>@@t_main@@</textcolor>
+							<label>$INFO[Window(Home).Property(hppi.WndHadesAudioSentVar)]</label>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>-1</top>
+							<width>530</width>
+							<height>1</height>
+							<texture colordiffuse="@@bg_card@@">colors-white.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<align>left</align>
+					</control>
+					<control type="grouplist">
+						<width>530</width>
+						<height min="32" max="96">auto</height>
+						<orientation>vertical</orientation>
+						<itemgap>0</itemgap>
+						<usecontrolcoords>true</usecontrolcoords>
+						<visible>!String.IsEmpty(Window(Home).Property(hades.audio.decl)) | !String.IsEmpty(Window(Home).Property(hades.audio.declwhy)) | !String.IsEmpty(Window(Home).Property(hades.audio.objects))</visible>
+						<control type="group">
+							<left>0</left>
+							<top>0</top>
+							<width>130</width>
+							<height>0</height>
+							<control type="label">
+								<left>0</left>
+								<top>0</top>
+								<width>130</width>
+								<height>32</height>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@t_label@@</textcolor>
+								<label>Speakers</label>
+								<align>left</align>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="textbox">
+							<left>130</left>
+							<top>0</top>
+							<width>400</width>
+							<height min="32" max="96">auto</height>
+							<aligny>center</aligny>
+							<align>right</align>
+							<font>font10</font>
+							<textcolor>@@t_main@@</textcolor>
+							<label>$INFO[Window(Home).Property(hppi.WndHadesAudioDeclVar)]</label>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>-1</top>
+							<width>530</width>
+							<height>1</height>
+							<texture colordiffuse="@@bg_card@@">colors-white.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<align>left</align>
+					</control>
 					<align>left</align>
 				</control>
 				<control type="grouplist">
@@ -9413,7 +9511,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FL;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;FL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>FL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;FL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>FL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;FL;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9479,7 +9645,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;FLOC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FLOC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;FLOC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>FLC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FLOC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FLOC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;FLOC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>FLC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;FLOC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FLOC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;FLOC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9545,7 +9779,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;FC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>FC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;FC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>FC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;FC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9611,7 +9913,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;FROC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FROC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;FROC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>FRC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FROC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FROC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;FROC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>FRC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;FROC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FROC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;FROC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9677,7 +10047,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FR;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;FR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>FR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;FR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;FR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>FR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;FR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;FR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;FR;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9743,7 +10181,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;LFE;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;LFE;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;LFE;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>LFE</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;LFE;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;LFE;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;LFE;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>LFE</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;LFE;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;LFE;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;LFE;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9809,7 +10315,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TFL;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TFL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TFL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TFL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TFL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFL;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9875,7 +10449,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TFC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TFC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TFC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TFC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TFC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -9941,7 +10583,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TFR;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TFR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TFR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TFR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TFR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TFR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TFR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TFR;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10007,7 +10717,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;SL;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;SL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;SL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>SL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;SL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;SL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;SL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>SL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;SL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;SL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;SL;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10073,7 +10851,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10139,7 +10985,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;SR;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;SR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;SR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>SR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;SR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;SR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;SR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>SR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;SR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;SR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;SR;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10205,7 +11119,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TBL;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TBL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TBL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TBL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TBL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBL;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10271,7 +11253,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TBC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TBC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TBC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TBC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TBC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10337,7 +11387,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TBR;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TBR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TBR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TBR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>62</width>
+								<height>62</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TBR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;TBR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TBR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TBR;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10364,6 +11482,274 @@
 								<font>font10</font>
 								<textcolor>@@t_spk_off@@</textcolor>
 								<label>TBR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<left>172</left>
+						<top>248</top>
+						<width>1</width>
+						<height>1</height>
+						<control type="group">
+							<visible>String.Contains(Window(Home).Property(hppi.spk),;TSL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@t_spk_on@@</textcolor>
+								<label>TSL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TSL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TSL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TSL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TSL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TSL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TSL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TSL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TSL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TSL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TSL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF3A3F4A">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@t_spk_off@@</textcolor>
+								<label>TSL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<left>358</left>
+						<top>248</top>
+						<width>1</width>
+						<height>1</height>
+						<control type="group">
+							<visible>String.Contains(Window(Home).Property(hppi.spk),;TSR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@t_spk_on@@</textcolor>
+								<label>TSR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TSR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;TSR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>TSR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;TSR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TSR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;TSR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>TSR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;TSR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;TSR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;TSR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>66</width>
+								<height>66</height>
+								<texture colordiffuse="FF3A3F4A">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>60</width>
+								<height>60</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>44</width>
+								<height>44</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font_flag</font>
+								<textcolor>@@t_spk_off@@</textcolor>
+								<label>TSR</label>
 								<disabledcolor>40FFFFFF</disabledcolor>
 								<selectedcolor>FFFFB70F</selectedcolor>
 								<scroll estuary="false">true</scroll>
@@ -10403,7 +11789,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;BL;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BL;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;BL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>BL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BL;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;BL;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>BL</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;BL;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BL;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;BL;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10469,7 +11923,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;BC;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BC;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;BC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>BC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BC;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;BC;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>BC</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>false + !String.Contains(Window(Home).Property(hppi.spk),;BC;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BC;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;BC;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10535,7 +12057,75 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;BR;)</visible>
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BR;) + String.Contains(Window(Home).Property(hades.audio.spkobj),;BR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>@@bg_spk_on@@</textcolor>
+								<label>BR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!String.Contains(Window(Home).Property(hppi.spk),;BR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BR;) + String.Contains(Window(Home).Property(hades.audio.spkdecl),;BR;)</visible>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>81</width>
+								<height>81</height>
+								<texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>75</width>
+								<height>75</height>
+								<texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="label">
+								<centerleft>0</centerleft>
+								<centertop>0</centertop>
+								<width>54</width>
+								<height>54</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font10</font>
+								<textcolor>FFB8BEC9</textcolor>
+								<label>BR</label>
+								<disabledcolor>40FFFFFF</disabledcolor>
+								<selectedcolor>FFFFB70F</selectedcolor>
+								<scroll estuary="false">true</scroll>
+								<scrollspeed>40</scrollspeed>
+							</control>
+						</control>
+						<control type="group">
+							<visible>true + !String.Contains(Window(Home).Property(hppi.spk),;BR;) + !String.Contains(Window(Home).Property(hades.audio.spkobj),;BR;) + !String.Contains(Window(Home).Property(hades.audio.spkdecl),;BR;)</visible>
 							<control type="image">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
@@ -10586,6 +12176,14 @@
 					<scroll estuary="false">true</scroll>
 					<scrollspeed>40</scrollspeed>
 				</control>
+				<control type="grouplist"><left>1386</left><top>164</top><width>330</width><height>24</height><orientation>horizontal</orientation><align>right</align><itemgap>8</itemgap><usecontrolcoords>true</usecontrolcoords><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spk))</visible>
+<control type="group"><width>16</width><height>24</height><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture></control></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Sound</label></control>
+<control type="group"><width>16</width><height>24</height><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkobj))</visible><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="@@bg_spk_on@@">buttons-roundbutton-fo.png</texture></control><control type="image"><left>2</left><top>6</top><width>12</width><height>12</height><texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture></control></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Objects</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkobj))</visible></control>
+<control type="group"><width>16</width><height>24</height><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkdecl))</visible><control type="image"><top>4</top><width>16</width><height>16</height><texture colordiffuse="FF8C93A1">buttons-roundbutton-fo.png</texture></control><control type="image"><left>2</left><top>6</top><width>12</width><height>12</height><texture colordiffuse="@@bg_spk_off@@">buttons-roundbutton-fo.png</texture></control></control>
+<control type="label"><width>auto</width><height>24</height><aligny>center</aligny><font>font10</font><textcolor>@@t_label@@</textcolor><label>Declared</label><visible>!String.IsEmpty(Window(Home).Property(hades.audio.spkdecl))</visible></control>
+</control>
 				<control type="label">
 					<left>1186</left>
 					<top>652</top>

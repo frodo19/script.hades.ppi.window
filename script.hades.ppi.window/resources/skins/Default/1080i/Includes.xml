@@ -294,6 +294,7 @@
 	<variable name="WndHadesOvDecodingVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),hw)">Grafikus kártya$INFO[Window(Home).Property(hades.video.api), (,)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),sw)">Processzor (szoftveres)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),mixed)">Grafikus kártya + processzor</value>
 	</variable>
 	<variable name="WndHadesOvEotfVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">nincs (Dolby Vision)</value>
@@ -399,6 +400,10 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),slow)">Vissza 2D-re: a processzor nem tudta időben dekódolni a 3D videó mindkét nézetét.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),dvipt)">Dolby Vision 3D (20-as profil): az egyik nézet 2D-ben látszik, a metaadataival újraépítve.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_as_sdr)">Ez a HDR videó SDR-ként megy ki, ahogy a "HDR videók lejátszása SDR-ként" kéri.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),hdr10plus)">Nem Dolby Visionként küldve: ez a kijelző fogad HDR10+-t, és a videó saját HDR10+-át kapja.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),choice)">Nem Dolby Visionként küldve: ehhez a videóhoz másik kimenetet választottál.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),nodv)">Nem Dolby Visionként küldve: $VAR[WndHadesDVReasonVar].</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_as_dv)">Dolby Visionként küldve, ahogy a "HDR10+ videók lejátszása Dolby Visionként" (Mindig) kéri, bár ez a kijelző fogad HDR10+-t.</value>
 	</variable>
 	<variable name="WndHadesSumTodoVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),tv)">Ellenőrizd ezt a kijelzőbemenetet: a játékmódját és a Dolby Vision beállítását.</value>
@@ -415,6 +420,8 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),system)">Lásd a Rendszer oldalt.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdrassdr)">HDR-ként küldéséhez állítsd a "HDR videók lejátszása SDR-ként" beállítást Soha értékre (Beállítások &gt; Rendszer &gt; Kijelző, Szakértő szint).</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),ratemode)">A "Kijelző képfrissítési frekvenciájának igazítása" be van kapcsolva, de a kijelzőnek nincs módja ennek a videónak a frekvenciáján (vagy a kijelzőbeállítások fehérlistája kihagyja).</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),dvthisvideo)">Hogy Dolby Visionként menjen ki, válaszd a Dolby Visiont a lenti gombbal, vagy a lejátszó beállításaiban a "HDR kimenet (ez a videó)" alatt.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdr10plusmode)">Itt a saját HDR10+ hűbb: a "HDR10+ videók lejátszása Dolby Visionként" alatt válaszd a "Ahol a kijelzőn nincs HDR10+" lehetőséget.</value>
 	</variable>
 	<variable name="WndHadesSysFormatVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.pixelformat),rgb)">RGB</value>
@@ -609,7 +616,7 @@
 		<value>$INFO[Window(Home).Property(hades.audio.sent)]$INFO[Window(Home).Property(hades.audio.fold),; ,]$INFO[Window(Home).Property(hades.audio.folddrop),; , kihagyva]</value>
 	</variable>
 	<variable name="WndHadesAudioDeclVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">$INFO[Window(Home).Property(hades.audio.decl)]$INFO[Window(Home).Property(hades.audio.declby), (,)]$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">legfeljebb ennyit fogad: $INFO[Window(Home).Property(hades.audio.decl)]$VAR[WndHadesAudioDeclByVar]$VAR[WndHadesAudioDeclRoomVar]$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),none)">nincs: az EDID-je nem jelez hangszórót$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),other)">nincs beolvasva: a hang másik kimenetre megy$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),otherdisplay)">nincs beolvasva: a hang másik kijelzőre megy$VAR[WndHadesAudioObjectsSaidVar]</value>
@@ -620,6 +627,18 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),noheights)">; a vevő rendereli az objektumokat; magassági csatornát nem jelez</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notdeclared)">; a vevő nem jelzi az objektumokat: csak az alap</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notknown)">; objektumok: ha a vevő dekódolja őket</value>
+	</variable>
+	<variable name="WndHadesAudioDeclByVar">
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),repeater) + !String.IsEmpty(Window(Home).Property(hades.audio.declby))"> (a gép és a $INFO[Window(Home).Property(hades.audio.declby)] közötti eszköz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),repeater)"> (a gép és a kijelző közötti eszköz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),orarc) + !String.IsEmpty(Window(Home).Property(hades.audio.declby))"> ($INFO[Window(Home).Property(hades.audio.declby)] vagy az eARC/ARC-on lévő eszköz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),orarc)"> (a kijelző vagy az eARC/ARC-on lévő eszköz)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declfrom),eld)">$INFO[Window(Home).Property(hades.audio.declby), (,)]; csak az ELD: magassági hangszórók nélkül</value>
+		<value>$INFO[Window(Home).Property(hades.audio.declby), (,)]</value>
+	</variable>
+	<variable name="WndHadesAudioDeclRoomVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.declroom))">; a hangszórói: $INFO[Window(Home).Property(hades.audio.declroom)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.declnoroom))">; nem mondja meg, milyen hangszórói vannak</value>
 	</variable>
 	<include name="WndHadesLevelCell">
 		<param name="left">0</param>

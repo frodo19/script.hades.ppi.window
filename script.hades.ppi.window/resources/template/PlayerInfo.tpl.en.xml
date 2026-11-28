@@ -9362,7 +9362,7 @@
 					</control>
 					<control type="grouplist">
 						<width>530</width>
-						<height min="32" max="96">auto</height>
+						<height min="32" max="180">auto</height>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
 						<usecontrolcoords>true</usecontrolcoords>
@@ -9392,7 +9392,7 @@
 							<left>130</left>
 							<top>0</top>
 							<width>400</width>
-							<height min="32" max="96">auto</height>
+							<height min="32" max="180">auto</height>
 							<aligny>center</aligny>
 							<align>right</align>
 							<font>font10</font>
@@ -10301,7 +10301,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10403,7 +10403,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10435,7 +10435,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10537,7 +10537,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10569,7 +10569,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10671,7 +10671,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10837,7 +10837,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -10939,7 +10939,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11105,7 +11105,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11207,7 +11207,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11239,7 +11239,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11341,7 +11341,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11373,7 +11373,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11475,7 +11475,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>62</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11507,7 +11507,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11541,7 +11541,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11575,7 +11575,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11609,7 +11609,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11641,7 +11641,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11675,7 +11675,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11709,7 +11709,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -11743,7 +11743,7 @@
 							<control type="label">
 								<centerleft>0</centerleft>
 								<centertop>0</centertop>
-								<width>44</width>
+								<width>120</width>
 								<height>44</height>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -14362,6 +14362,7 @@
 				<focusedcolor>FF0D0E12</focusedcolor>
 				<label>Output of this video</label>
 				<label2>$INFO[Player.Process(videodvoutputchoice)]</label2>
+				
 				<texturefocus@@sb@@ colordiffuse="@@bg_sel@@">@@stex@@</texturefocus>
 				<texturenofocus@@sb@@ colordiffuse="@@bg_btn@@">@@stex@@</texturenofocus>
 				<ondown>Close</ondown>

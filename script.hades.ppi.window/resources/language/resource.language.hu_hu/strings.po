@@ -1719,3 +1719,7 @@ msgstr "Magassági csatorna hátterének átlátszatlansága (aktív)"
 msgctxt "#32077"
 msgid "Height channel text (active)"
 msgstr "Magassági csatorna szövege (aktív)"
+
+msgctxt "#32078"
+msgid "Publish per-core CPU load for skins (cb1.cores, cb1.coresc, cb1.cpu)"
+msgstr "Magonkénti CPU-terhelés közzététele a skineknek (cb1.cores, cb1.coresc, cb1.cpu)"

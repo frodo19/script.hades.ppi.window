@@ -1719,3 +1719,7 @@ msgstr ""
 msgctxt "#32077"
 msgid "Height channel text (active)"
 msgstr ""
+
+msgctxt "#32078"
+msgid "Publish per-core CPU load for skins (cb1.cores, cb1.coresc, cb1.cpu)"
+msgstr ""

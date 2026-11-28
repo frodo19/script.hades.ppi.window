@@ -294,6 +294,7 @@
 	<variable name="WndHadesOvDecodingVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),hw)">Graphics card$INFO[Window(Home).Property(hades.video.api), (,)]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),sw)">Processor (software)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.video.decoding),mixed)">Graphics card + processor</value>
 	</variable>
 	<variable name="WndHadesOvEotfVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.signal),dv)">none (Dolby Vision)</value>
@@ -399,6 +400,10 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),slow)">Back to 2D: the processor did not decode both views of this 3D video in time.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),second_view) + String.IsEqual(Window(Home).Property(hades.sum.arg),dvipt)">Dolby Vision 3D (profile 20): one view is shown in 2D, rebuilt with its metadata.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr_as_sdr)">This HDR video is sent as SDR, as "Play HDR videos as SDR" asks.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),hdr10plus)">Not sent as Dolby Vision: this display takes HDR10+ and gets the video's own HDR10+.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),choice)">Not sent as Dolby Vision: another output was chosen for this video.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_not_dv) + String.IsEqual(Window(Home).Property(hades.sum.arg),nodv)">Not sent as Dolby Vision: $VAR[WndHadesDVReasonVar].</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.code),hdr10plus_as_dv)">Sent as Dolby Vision, as "Play HDR10+ videos as Dolby Vision" (Always) asks, although this display takes HDR10+.</value>
 	</variable>
 	<variable name="WndHadesSumTodoVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),tv)">Check this TV input: its game mode and its Dolby Vision setting.</value>
@@ -415,6 +420,8 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),system)">See the System page.</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdrassdr)">To send it as HDR, set "Play HDR videos as SDR" to Never (Settings &gt; System &gt; Display, Expert level).</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),ratemode)">Adjust display refresh rate is on, but the display has no mode at the rate of this video (or the whitelist of the display settings leaves it out).</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),dvthisvideo)">To send it as Dolby Vision, choose Dolby Vision with the button below, or in "HDR output (this video)" in the player settings.</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.sum.todo),hdr10plusmode)">Its own HDR10+ is more faithful here: choose "Where the display has no HDR10+" in "Play HDR10+ videos as Dolby Vision".</value>
 	</variable>
 	<variable name="WndHadesSysFormatVar">
 		<value condition="String.IsEqual(Window(Home).Property(hades.out.pixelformat),rgb)">RGB</value>
@@ -609,7 +616,7 @@
 		<value>$INFO[Window(Home).Property(hades.audio.sent)]$INFO[Window(Home).Property(hades.audio.fold),; ,]$INFO[Window(Home).Property(hades.audio.folddrop),; , left out]</value>
 	</variable>
 	<variable name="WndHadesAudioDeclVar">
-		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">$INFO[Window(Home).Property(hades.audio.decl)]$INFO[Window(Home).Property(hades.audio.declby), (,)]$VAR[WndHadesAudioObjectsSaidVar]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.decl))">accepts up to $INFO[Window(Home).Property(hades.audio.decl)]$VAR[WndHadesAudioDeclByVar]$VAR[WndHadesAudioDeclRoomVar]$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),none)">none: its EDID declares no speakers$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),other)">not read: the sound goes to another output$VAR[WndHadesAudioObjectsSaidVar]</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declwhy),otherdisplay)">not read: the sound goes to another display$VAR[WndHadesAudioObjectsSaidVar]</value>
@@ -620,6 +627,18 @@
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),noheights)">; the receiver renders the objects; it declares no heights</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notdeclared)">; the receiver does not declare the objects: the bed alone</value>
 		<value condition="String.IsEqual(Window(Home).Property(hades.audio.objects),notknown)">; objects: if the receiver decodes them</value>
+	</variable>
+	<variable name="WndHadesAudioDeclByVar">
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),repeater) + !String.IsEmpty(Window(Home).Property(hades.audio.declby))"> (the device between this PC and $INFO[Window(Home).Property(hades.audio.declby)])</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),repeater)"> (the device between this PC and the display)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),orarc) + !String.IsEmpty(Window(Home).Property(hades.audio.declby))"> ($INFO[Window(Home).Property(hades.audio.declby)] or the device on its eARC/ARC)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declsrc),orarc)"> (the display or the device on its eARC/ARC)</value>
+		<value condition="String.IsEqual(Window(Home).Property(hades.audio.declfrom),eld)">$INFO[Window(Home).Property(hades.audio.declby), (,)]; ELD only: no heights</value>
+		<value>$INFO[Window(Home).Property(hades.audio.declby), (,)]</value>
+	</variable>
+	<variable name="WndHadesAudioDeclRoomVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.declroom))">; its speakers: $INFO[Window(Home).Property(hades.audio.declroom)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(hades.audio.declnoroom))">; it does not say which speakers it has</value>
 	</variable>
 	<include name="WndHadesLevelCell">
 		<param name="left">0</param>
